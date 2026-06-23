@@ -1,0 +1,93 @@
+/* ====================================================================
+   Elephant — landing PWA (vanilla). Tokens + base + keyframes.
+   Fidelidad alta: colores, tipografías y motion son los definitivos.
+   ==================================================================== */
+
+:root {
+  --bg: #F4EFE7;
+  --bg2: #EFE8DB;
+  --card: #FBF7F0;
+  --indigo: #2B2752;
+  --indigo-deep: #241F40;
+  --gold: #E8B881;
+  --ink: #221C16;
+  --text2: #6E655A;
+  --muted: #A99F90;
+  --muted2: #8B8174;
+  --muted3: #B0917E;
+  --green: #5C7A61;
+  --green2: #8FB596;
+  --lilac: #8E88C4;
+  --terracota: #BC5640;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background: #DCD5C8; /* gris arena a los lados de la columna */
+  font-family: 'Newsreader', serif;
+  color: var(--ink);
+}
+input, select, textarea { font-size: max(16px, 1em); }
+button { min-height: 44px; }
+img, svg { max-width: 100%; }
+:focus-visible { outline: 2px solid var(--indigo); outline-offset: 3px; border-radius: 4px; }
+input:focus { outline: none; }
+::selection { background: var(--gold); color: var(--ink); }
+
+/* Columna móvil centrada con fondo gris a los lados */
+.shell {
+  max-width: 430px;
+  margin: 0 auto;
+  background: var(--bg);
+  min-height: 100svh;
+  box-shadow: 0 0 80px -30px rgba(40, 34, 24, 0.45);
+}
+
+/* Secciones de scroll vertical */
+section.screen {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Utilidades de estado (mostrar/ocultar sub-vistas) */
+[hidden] { display: none !important; }
+
+/* ===== Keyframes (idénticos al diseño) ===== */
+@keyframes reveal { from { transform: translateY(12px); } to { transform: none; } }
+@keyframes fadeUp { from { transform: translateY(7px); } to { transform: none; } }
+@keyframes breathe { 0%,100% { opacity: .5; transform: scale(.94); } 50% { opacity: .95; transform: scale(1); } }
+@keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@keyframes nudge { 0%,100% { transform: translateY(0); opacity: .5; } 50% { transform: translateY(5px); opacity: 1; } }
+@keyframes loaderdot { 0%,80%,100% { opacity: .25; transform: translateY(0); } 40% { opacity: 1; transform: translateY(-5px); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes spitPop {
+  0% { opacity: 0; transform: rotate(-8deg) scale(.6); }
+  60% { opacity: 1; transform: rotate(-8deg) scale(1.12); }
+  100% { opacity: 1; transform: rotate(-8deg) scale(1); }
+}
+@keyframes mqL { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes mqR { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+@keyframes growBar { from { width: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* Botones de palabras del selector — hover */
+.pick-word { transition: border-color .18s ease, background .18s ease; }
+.pick-word:hover { border-color: var(--indigo); background: var(--card); }
+
+/* Reveal helper aplicado por JS */
+.anim-reveal { animation: reveal .42s cubic-bezier(.16, 1, .3, 1) both; }
+.anim-fadeup { animation: fadeUp .35s ease both; }

@@ -1,0 +1,15 @@
+{
+  "name": "Elephant",
+  "short_name": "Elephant",
+  "description": "Aprende inglés hoy. Recuérdalo dentro de diez años.",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F4EFE7",
+  "theme_color": "#2B2752",
+  "icons": [
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
