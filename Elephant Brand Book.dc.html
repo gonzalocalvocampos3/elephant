@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html{scroll-snap-type:none;scroll-behavior:smooth;}
+  body{margin:0;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;background:#F4EFE7;}
+  input,select,textarea{font-size:max(16px,1em);}
+  button{min-height:44px;}
+  img,svg{max-width:100%;}}
+  :focus-visible{outline:2px solid #2B2752;outline-offset:3px;border-radius:4px;}
+  input:focus{outline:none;}
+  ::selection{background:#E8B881;color:#221C16;}
+  @keyframes reveal{from{transform:translateY(12px)}to{transform:none}}
+  @keyframes fadeUp{from{transform:translateY(7px)}to{transform:none}}
+  @keyframes breathe{0%,100%{opacity:.5;transform:scale(.94)}50%{opacity:.95;transform:scale(1)}}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+  @keyframes nudge{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(5px);opacity:1}}
+  @keyframes loaderdot{0%,80%,100%{opacity:.25;transform:translateY(0)}40%{opacity:1;transform:translateY(-5px)}}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes spitPop{0%{opacity:0;transform:rotate(-8deg) scale(.6)}60%{opacity:1;transform:rotate(-8deg) scale(1.12)}100%{opacity:1;transform:rotate(-8deg) scale(1)}}
+  @keyframes mqL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @keyframes mqR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+  @keyframes drawln{from{stroke-dashoffset:120}to{stroke-dashoffset:0}}
+  @media (prefers-reduced-motion: reduce){*{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;}html{scroll-behavior:auto;}}
+</style>
+</helmet>
+
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" fill="#2B2752"/>
+    <g fill="#F4EFE7" transform="translate(18 18) scale(1.04)">
+      <ellipse cx="12" cy="29" rx="8.5" ry="13"/><ellipse cx="52" cy="29" rx="8.5" ry="13"/>
+      <path d="M16 26 C16 15 25 11 32 11 C39 11 48 15 48 26 C48 35 44 41 40 44 C40.5 49 41 53 38 57.5 C36 60.5 32 60.5 31 57.5 C30.2 55 31.5 51.5 33 49.5 C27 47 18 40 16 26 Z"/>
+      <circle cx="24" cy="27" r="2.6" fill="#2B2752"/><circle cx="40" cy="27" r="2.6" fill="#2B2752"/>
+    </g>
+  </svg>
+</template>
+
+<div style="background:#F4EFE7;font-family:'Newsreader',serif;color:#221C16;">
+  <div style="max-width:430px;margin:0 auto;">
+
+  <!-- ================= S1 · LA PROMESA ================= -->
+  <section style="position:relative;scroll-snap-align:start;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:clamp(56px,10vw,80px) clamp(20px,5vw,32px);position:relative;">
+    <div style="position:absolute;top:26px;left:0;right:0;display:flex;justify-content:center;align-items:center;gap:9px;">
+      <svg width="24" height="24" viewBox="0 0 64 64"><g fill="#221C16"><ellipse cx="12" cy="29" rx="8.5" ry="13"/><ellipse cx="52" cy="29" rx="8.5" ry="13"/><path d="M16 26 C16 15 25 11 32 11 C39 11 48 15 48 26 C48 35 44 41 40 44 C40.5 49 41 53 38 57.5 C36 60.5 32 60.5 31 57.5 C30.2 55 31.5 51.5 33 49.5 C27 47 18 40 16 26 Z"/></g></svg>
+      <span style="font:600 17px 'Newsreader',serif;letter-spacing:-0.01em;">Elephant</span>
+    </div>
+
+    <h1 style="font:400 clamp(34px,9vw,42px)/1.08 'Newsreader',serif;letter-spacing:-0.02em;margin:0;max-width:760px;">
+      Aprende <strong style="font-weight:600;">inglés</strong> hoy.<br><span style="font-style:italic;color:#2B2752;">Recuérdalo dentro de diez años.</span>
+    </h1>
+
+    <div onClick="{{ scrollToMetodo }}" style="position:absolute;bottom:30px;left:0;right:0;display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#A99F90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation:nudge 1.8s ease-in-out infinite;"><path d="M6 9 l6 6 6 -6"/></svg>
+    </div>
+  </section>
+
+  <!-- ================= S1b · EL MÉTODO (contexto) ================= -->
+  <section id="metodo" style="position:relative;scroll-snap-align:start;position:relative;min-height:100svh;overflow:hidden;background:#EFE8DB;border-top:1px solid #E3DBCC;border-bottom:1px solid #E3DBCC;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(20px,5vw,36px);padding:clamp(56px,10vw,80px) clamp(20px,5vw,32px);">
+    <div style="text-align:center;">
+      <div style="font:500 13px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#A99F90;">El método tradicional</div>
+      <h2 style="font:400 clamp(32px,9vw,46px)/1.08 'Newsreader',serif;letter-spacing:-0.02em;margin:12px 0 0;">Repetir no funciona.</h2>
+    </div>
+
+    <!-- varias palabras cruzan; cada vez que una se ilumina en el centro, suma 1 -->
+    <div ref="{{ repTrack }}" style="position:relative;width:100%;height:clamp(120px,30vw,200px);overflow:hidden;">
+      <span data-rep="1" style="position:absolute;left:0;top:24%;transform:translate(-240px,-50%);font:400 clamp(34px,11vw,56px) 'Newsreader',serif;color:#C2B299;white-space:nowrap;will-change:transform;">shelter</span>
+      <span data-rep="2" style="position:absolute;left:0;top:42%;transform:translate(-240px,-50%);font:400 clamp(34px,11vw,56px) 'Newsreader',serif;font-style:italic;color:#D2C6B0;white-space:nowrap;will-change:transform;">shelter</span>
+      <span data-rep="3" style="position:absolute;left:0;top:58%;transform:translate(-240px,-50%);font:400 clamp(34px,11vw,56px) 'Newsreader',serif;color:#BFAF95;white-space:nowrap;will-change:transform;">shelter</span>
+      <span data-rep="4" style="position:absolute;left:0;top:76%;transform:translate(-240px,-50%);font:400 clamp(34px,11vw,56px) 'Newsreader',serif;font-style:italic;color:#CBBCA4;white-space:nowrap;will-change:transform;">shelter</span>
+    </div>
+
+    <div style="text-align:center;">
+      <div style="font:500 12px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#A99F90;">repetición nº</div>
+      <div style="font:500 clamp(48px,14vw,68px)/1 'Newsreader',serif;color:#2B2752;margin-top:4px;">{{ reps }}</div>
+      <div style="font:400 clamp(15px,2.4vw,17px) 'Newsreader',serif;font-style:italic;color:#8B8174;margin-top:8px;">…y sigue sin quedarse.</div>
+    </div>
+
+    <div onClick="{{ scrollToProceso }}" style="position:absolute;bottom:28px;left:0;right:0;display:flex;justify-content:center;cursor:pointer;">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#A99F90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation:nudge 1.8s ease-in-out infinite;"><path d="M6 9 l6 6 6 -6"/></svg>
+    </div>
+
+  </section>
+
+  <!-- ================= S1c · EL MÉTODO ELEPHANT ================= -->
+  <section id="proceso" style="position:relative;scroll-snap-align:start;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:clamp(38px,8vw,54px) clamp(22px,6vw,28px);background:#F4EFE7;">
+    <div style="width:100%;max-width:400px;margin:0 auto;">
+
+        <!-- HOOK · mínimo -->
+        <div style="display:flex;align-items:center;justify-content:center;gap:8px;">
+          <svg width="18" height="18" viewBox="0 0 64 64"><g fill="#B0917E"><ellipse cx="12" cy="29" rx="8.5" ry="13"/><ellipse cx="52" cy="29" rx="8.5" ry="13"/><path d="M16 26 C16 15 25 11 32 11 C39 11 48 15 48 26 C48 35 44 41 40 44 C40.5 49 41 53 38 57.5 C36 60.5 32 60.5 31 57.5 C30.2 55 31.5 51.5 33 49.5 C27 47 18 40 16 26 Z"/></g></svg>
+          <div style="font:600 12px 'Hanken Grotesk';letter-spacing:0.22em;text-transform:uppercase;color:#B0917E;">El método Elephant</div>
+        </div>
+        <h2 style="font:400 clamp(32px,8.5vw,42px)/1.05 'Newsreader',serif;letter-spacing:-0.02em;margin:12px 0 0;color:#221C16;text-align:center;">Lo ridículo <span style="font-style:italic;color:#2B2752;">no se olvida</span>.</h2>
+
+        <!-- HERO · la escena anotada -->
+        <div style="margin-top:22px;background:#241F40;border-radius:24px;padding:20px 18px 22px;box-shadow:0 26px 52px -22px rgba(36,31,64,0.6);">
+          <div style="position:relative;width:280px;height:191px;margin:6px auto 0;">
+            <svg viewBox="0 0 220 150" width="280" height="191" style="display:block;position:absolute;inset:0;" fill="none" stroke="#F4EFE7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="20" y="82" width="118" height="50" rx="7" stroke="rgba(244,239,231,0.34)"/>
+              <path d="M26 100 L132 100 L124 128 L34 128 Z" fill="rgba(244,239,231,0.06)" stroke="rgba(244,239,231,0.5)"/>
+              <circle cx="79" cy="114" r="3.6" fill="#F4EFE7" stroke="none"/>
+              <path d="M70 100 C68 80 74 64 92 58 C100 55 112 56 118 62" stroke="#F4EFE7" stroke-width="3.4"/>
+              <path d="M70 100 C74 86 80 78 90 74" stroke="rgba(244,239,231,0.5)" stroke-width="2.4"/>
+              <path d="M112 54 C126 50 142 54 146 64 C148 70 144 76 136 77 C130 78 120 76 116 70 C113 65 112 59 112 54 Z" fill="rgba(244,239,231,0.12)" stroke="#F4EFE7"/>
+              <path d="M58 92 q6 -16 16 -18" stroke="rgba(244,239,231,0.45)" stroke-width="2.4"/>
+              <path d="M108 52 l-3 -9 l8 4 z" fill="#F4EFE7" stroke="#F4EFE7"/>
+              <circle cx="120" cy="62" r="2.4" fill="#241F40" stroke="none"/>
+              <path d="M146 66 q14 0 22 -4" stroke="#E8B881" stroke-width="2.6"/>
+              <path d="M150 72 q16 2 26 -1" stroke="#E8B881" stroke-width="2.2"/>
+              <circle cx="178" cy="60" r="3.2" fill="#E8B881" stroke="none"/>
+              <circle cx="186" cy="68" r="2.4" fill="#E8B881" stroke="none"/>
+              <circle cx="180" cy="75" r="1.8" fill="#E8B881" stroke="none"/>
+            </svg>
+
+            <!-- pins numerados -->
+            <span style="position:absolute;left:178px;top:50px;transform:translate(-50%,-50%);width:24px;height:24px;border-radius:50%;background:#8E88C4;color:#241F40;display:flex;align-items:center;justify-content:center;font:700 13px 'Hanken Grotesk';box-shadow:0 4px 10px -3px rgba(0,0,0,0.5);">1</span>
+            <span style="position:absolute;left:74px;top:150px;transform:translate(-50%,-50%);width:24px;height:24px;border-radius:50%;background:#E8B881;color:#241F40;display:flex;align-items:center;justify-content:center;font:700 13px 'Hanken Grotesk';box-shadow:0 4px 10px -3px rgba(0,0,0,0.5);">2</span>
+            <span style="position:absolute;left:236px;top:84px;transform:translate(-50%,-50%);width:24px;height:24px;border-radius:50%;background:#8FB596;color:#241F40;display:flex;align-items:center;justify-content:center;font:700 13px 'Hanken Grotesk';box-shadow:0 4px 10px -3px rgba(0,0,0,0.5);">3</span>
+
+            <!-- spit handwriting -->
+            <span style="position:absolute;left:244px;top:34px;transform:rotate(-8deg);font:700 26px 'Caveat',cursive;color:#E8B881;animation:spitPop .5s cubic-bezier(.3,1.4,.5,1) both .3s;">¡pfft!</span>
+          </div>
+        </div>
+
+        <!-- LEGEND · 3 reglas compactas -->
+        <div style="display:flex;gap:9px;margin-top:16px;">
+          <div style="flex:1;text-align:center;background:#FBF7F0;border:1px solid #EBE4D7;border-radius:15px;padding:14px 8px;">
+            <span style="display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:#2B2752;color:#F4EFE7;font:700 13px 'Hanken Grotesk';margin-bottom:8px;">1</span>
+            <div style="font:500 17px/1.05 'Newsreader',serif;color:#221C16;">Paradójica</div>
+            <div style="font:400 11.5px/1.3 'Hanken Grotesk';color:#8B8174;margin-top:3px;">imposible y ridícula</div>
+          </div>
+          <div style="flex:1;text-align:center;background:#FBF7F0;border:1px solid #EBE4D7;border-radius:15px;padding:14px 8px;">
+            <span style="display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:#C9823F;color:#F4EFE7;font:700 13px 'Hanken Grotesk';margin-bottom:8px;">2</span>
+            <div style="font:500 17px/1.05 'Newsreader',serif;color:#221C16;">Sensorial</div>
+            <div style="font:400 11.5px/1.3 'Hanken Grotesk';color:#8B8174;margin-top:3px;">se oye y se nota</div>
+          </div>
+          <div style="flex:1;text-align:center;background:#FBF7F0;border:1px solid #EBE4D7;border-radius:15px;padding:14px 8px;">
+            <span style="display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:#5C7A61;color:#F4EFE7;font:700 13px 'Hanken Grotesk';margin-bottom:8px;">3</span>
+            <div style="font:500 17px/1.05 'Newsreader',serif;color:#221C16;">Con acción</div>
+            <div style="font:400 11.5px/1.3 'Hanken Grotesk';color:#8B8174;margin-top:3px;">algo te pasa</div>
+          </div>
+        </div>
+
+        <!-- NOTA · generado por IA -->
+        <!-- CIERRE · la IA como protagonista -->
+        <div style="margin-top:13px;background:#2B2752;border-radius:18px;padding:18px 20px;display:flex;align-items:center;gap:14px;box-shadow:0 20px 42px -22px rgba(43,39,82,0.6);">
+          <span style="display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:rgba(232,184,129,0.16);border:1px solid rgba(232,184,129,0.4);flex:none;"><svg width="20" height="20" viewBox="0 0 24 24" fill="#E8B881"><path d="M12 1 L13.8 9.5 L22 11.2 L13.8 13 L12 22 L10.2 13 L2 11.2 L10.2 9.5 Z"/></svg></span>
+          <div>
+            <div style="font:400 21px/1.18 'Newsreader',serif;color:#F7F3EA;">Una historia memorable <span style="font-style:italic;">para cada palabra</span>.</div>
+            <div style="font:500 12.5px/1.35 'Hanken Grotesk';color:#E8B881;margin-top:3px;">Creada por nuestra IA, a tu medida.</div>
+          </div>
+        </div>
+
+
+      </div>
+  </section>
+
+  <!-- ================= S2 · EL DOLOR + DEMO (el corazón) ================= -->
+  <section id="demo" ref="{{ demoRef }}" style="position:relative;scroll-snap-align:start;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:clamp(48px,8vw,72px) clamp(20px,5vw,32px);background:#EFE8DB;border-top:1px solid #E3DBCC;border-bottom:1px solid #E3DBCC;">
+
+    <!-- A · CURATED: cajón -> beat -> drawer -->
+    <sc-if value="{{ notRevealed }}" hint-placeholder-val="{{ true }}">
+      <div style="width:100%;max-width:460px;text-align:center;">
+        <h2 style="font:400 clamp(28px,7vw,38px)/1.15 'Newsreader',serif;letter-spacing:-0.02em;margin:0 0 26px;max-width:360px;margin-left:auto;margin-right:auto;">¿Cómo se dice en inglés?</h2>
+
+        <!-- mini "pantalla" de la app · repaso -->
+        <div style="background:#FBF7F0;border:1px solid #E8E1D3;border-radius:26px;padding:clamp(28px,5vw,34px) clamp(22px,4vw,28px);box-shadow:0 22px 50px -30px rgba(40,34,24,0.45);">
+          <div style="font:600 12px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#A99F90;">En español</div>
+          <div style="font:400 clamp(44px,11vw,54px)/1 'Newsreader',serif;letter-spacing:-0.02em;margin:14px 0 0;">cajón</div>
+        </div>
+
+        <div style="display:flex;gap:11px;margin-top:16px;">
+          <input ref="{{ curatedRef }}" onKeyDown="{{ onCuratedKey }}" placeholder="Escríbela en inglés…" style="flex:1;min-width:0;background:#fff;border:1.5px solid #DDD0BC;color:#221C16;border-radius:14px;padding:16px;font:500 16px 'Hanken Grotesk';outline:none;" />
+          <button onClick="{{ revealCurated }}" style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;background:#F4EFE7;border:1.5px solid #DDD0BC;color:#6E655A;border-radius:14px;padding:16px;font:600 16px 'Hanken Grotesk';cursor:pointer;">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#6E655A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6 l12 12 M18 6 l-12 12"/></svg>No me acuerdo
+          </button>
+        </div>
+        <p style="font:400 16px/1.45 'Newsreader',serif;font-style:italic;color:#8B8174;margin:16px auto 0;max-width:360px;">Intentas recordar la palabra, no la historia. Un gesto y a la siguiente.</p>
+      </div>
+    </sc-if>
+
+    <!-- A2 · LOADING NARRADO (curado) -->
+    <sc-if value="{{ curatedLoading }}">
+      <div style="width:100%;max-width:460px;">
+        <div style="background:#FBF7F0;border:1px solid #E8E1D3;border-radius:26px;padding:clamp(26px,5vw,32px) clamp(22px,4vw,28px);box-shadow:0 22px 50px -30px rgba(40,34,24,0.45);text-align:center;animation:fadeUp .3s ease both;">
+          <svg width="42" height="42" viewBox="0 0 64 64" style="animation:floaty 2.4s ease-in-out infinite;"><g fill="#2B2752"><ellipse cx="12" cy="29" rx="8.5" ry="13"/><ellipse cx="52" cy="29" rx="8.5" ry="13"/><path d="M16 26 C16 15 25 11 32 11 C39 11 48 15 48 26 C48 35 44 41 40 44 C40.5 49 41 53 38 57.5 C36 60.5 32 60.5 31 57.5 C30.2 55 31.5 51.5 33 49.5 C27 47 18 40 16 26 Z"/></g></svg>
+          <div style="display:flex;flex-direction:column;margin:16px auto 0;max-width:340px;">
+            <sc-for list="{{ loadingSteps }}" as="st" hint-placeholder-count="3">
+              <div style="display:flex;align-items:flex-start;gap:11px;text-align:left;padding:7px 0;">
+                <div style="width:22px;height:22px;flex:none;display:flex;align-items:center;justify-content:center;margin-top:1px;">
+                  <sc-if value="{{ st.done }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5C7A61" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" stroke="rgba(92,122,97,0.3)"/><path d="M7.5 12 l3 3 L16.5 8.5"/></svg></sc-if>
+                  <sc-if value="{{ st.active }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2B2752" stroke-width="2.4" stroke-linecap="round" style="animation:spin .9s linear infinite;"><path d="M12 3 a9 9 0 1 0 9 9"/></svg></sc-if>
+                  <sc-if value="{{ st.todo }}"><span style="width:7px;height:7px;border-radius:50%;background:#D2C8B7;"></span></sc-if>
+                </div>
+                <sc-if value="{{ st.lit }}"><span style="font:400 16px/1.4 'Newsreader',serif;color:#3E372E;">{{ st.label }}</span></sc-if>
+                <sc-if value="{{ st.dim }}"><span style="font:400 16px/1.4 'Newsreader',serif;color:#B4AA9A;">{{ st.label }}</span></sc-if>
+              </div>
+            </sc-for>
+          </div>
+          <div style="margin-top:14px;border-top:1px solid #EAE2D3;padding-top:14px;">
+            <p style="font:400 13.5px/1.55 'Hanken Grotesk';color:#8B8174;margin:0 auto;max-width:360px;">Tu cerebro recuerda una imagen rara muchísimo mejor que una pareja de palabras. La historia es solo un andamio: en unos días se cae sola y te queda la palabra.</p>
+          </div>
+        </div>
+      </div>
+    </sc-if>
+
+    <!-- B · REVELACIÓN / ÉXITO -->
+    <sc-if value="{{ curatedReady }}">
+      <div style="width:100%;max-width:560px;animation:reveal .42s cubic-bezier(.16,1,.3,1) both;">
+        <!-- B0 · ACERTASTE -->
+        <sc-if value="{{ curatedSuccess }}">
+          <div style="text-align:center;animation:fadeUp .35s ease both;">
+            <div style="width:74px;height:74px;border-radius:50%;background:rgba(92,122,97,0.14);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
+              <div style="width:50px;height:50px;border-radius:50%;background:#5C7A61;display:flex;align-items:center;justify-content:center;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F4EFE7" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12 l5 5 L20 6"/></svg></div>
+            </div>
+            <div style="font:500 13px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#5C7A61;">¡Correcto!</div>
+            <div style="display:flex;align-items:baseline;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:10px;">
+              <span style="font:400 clamp(32px,8vw,42px)/1 'Newsreader',serif;color:#A99F90;text-decoration:line-through;text-decoration-thickness:1.5px;">cajón</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9823F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12 h13 M13 7 l5 5 -5 5"/></svg>
+              <span style="font:500 clamp(40px,11vw,54px)/1 'Newsreader',serif;color:#2B2752;letter-spacing:-0.015em;">drawer</span>
+            </div>
+            <p style="font:400 clamp(19px,2.8vw,23px)/1.45 'Newsreader',serif;color:#3E372E;margin:20px auto 0;max-width:380px;">Ya te la sabías. Pero, ¿seguirás acordándote <span style="font-style:italic;color:#2B2752;">dentro de un año</span>?</p>
+            <p style="font:400 16px/1.5 'Hanken Grotesk';color:#8B8174;margin:12px auto 0;max-width:360px;">Eso es justo lo que entrena Elephant. Prueba con una que quizá no sepas:</p>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ showCuratedCard }}">
+        <div style="font:500 13px 'Hanken Grotesk';letter-spacing:0.14em;text-transform:uppercase;color:#A99F90;text-align:center;margin-bottom:18px;">La escena que no se borra</div>
+
+        <div style="border-radius:26px;background:#241F40;padding:26px 24px;box-shadow:0 28px 56px -20px rgba(36,31,64,0.6),inset 0 1px 0 rgba(255,255,255,0.08);">
+          <!-- header -->
+          <div style="font:600 12px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:rgba(244,239,231,0.42);text-align:center;">Cajón en inglés</div>
+          <div style="display:flex;align-items:baseline;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:6px;">
+            <div style="font:500 clamp(44px,12vw,58px)/1 'Newsreader',serif;color:#F7F3EA;letter-spacing:-0.015em;">drawer</div>
+            <div style="font:400 18px 'Newsreader',serif;font-style:italic;color:rgba(244,239,231,0.55);">/ˈdrɔː.ər/</div>
+          </div>
+
+          <!-- PASO 1 · el puente del sonido -->
+          <div style="margin-top:22px;border:1px solid rgba(232,184,129,0.4);background:rgba(232,184,129,0.08);border-radius:18px;padding:18px 16px;">
+            <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(232,184,129,0.18);border-radius:999px;padding:5px 13px;margin-bottom:14px;"><span style="font:700 11px 'Hanken Grotesk';letter-spacing:0.08em;color:#E8B881;">PASO 1</span><span style="font:500 12px 'Hanken Grotesk';color:rgba(244,239,231,0.7);">una palabra que suena igual</span></div>
+            <div style="display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;">
+              <span style="font:500 26px 'Newsreader',serif;color:#F7F3EA;"><span style="color:#E8B881;font-weight:600;">draw</span>er</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(232,184,129,0.7)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12 h13 M13 7 l5 5 -5 5"/></svg>
+              <span style="font:700 18px 'Hanken Grotesk';color:#E8B881;letter-spacing:0.04em;">«dro»</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(232,184,129,0.7)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12 h13 M13 7 l5 5 -5 5"/></svg>
+              <span style="font:500 26px 'Newsreader',serif;color:#F7F3EA;"><span style="color:#E8B881;font-weight:600;">DRO</span>medario</span>
+            </div>
+          </div>
+
+          <!-- PASO 2 · la historia memorable -->
+          <div style="margin-top:14px;border:1px solid rgba(244,239,231,0.12);background:rgba(244,239,231,0.04);border-radius:18px;padding:18px 16px;">
+            <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(244,239,231,0.1);border-radius:999px;padding:5px 13px;margin-bottom:14px;"><span style="font:700 11px 'Hanken Grotesk';letter-spacing:0.08em;color:#F4EFE7;">PASO 2</span><span style="font:500 12px 'Hanken Grotesk';color:rgba(244,239,231,0.7);">una historia que no se olvida</span></div>
+            <div style="border-radius:14px;background:rgba(244,239,231,0.05);padding:12px;display:flex;justify-content:center;">
+              <svg viewBox="0 0 220 150" width="100%" style="max-width:230px;display:block;" fill="none" stroke="#F4EFE7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="20" y="82" width="118" height="50" rx="7" stroke="rgba(244,239,231,0.34)"/>
+                <path d="M26 100 L132 100 L124 128 L34 128 Z" fill="rgba(244,239,231,0.06)" stroke="rgba(244,239,231,0.5)"/>
+                <circle cx="79" cy="114" r="3.6" fill="#F4EFE7" stroke="none"/>
+                <path d="M70 100 C68 80 74 64 92 58 C100 55 112 56 118 62" stroke="#F4EFE7" stroke-width="3.4"/>
+                <path d="M70 100 C74 86 80 78 90 74" stroke="rgba(244,239,231,0.5)" stroke-width="2.4"/>
+                <path d="M112 54 C126 50 142 54 146 64 C148 70 144 76 136 77 C130 78 120 76 116 70 C113 65 112 59 112 54 Z" fill="rgba(244,239,231,0.12)" stroke="#F4EFE7"/>
+                <path d="M58 92 q6 -16 16 -18" stroke="rgba(244,239,231,0.45)" stroke-width="2.4"/>
+                <path d="M108 52 l-3 -9 l8 4 z" fill="#F4EFE7" stroke="#F4EFE7"/>
+                <circle cx="120" cy="62" r="2.4" fill="#241F40" stroke="none"/>
+                <path d="M146 66 q14 0 22 -4" stroke="#E8B881" stroke-width="2.6"/>
+                <path d="M150 72 q16 2 26 -1" stroke="#E8B881" stroke-width="2.2"/>
+                <circle cx="178" cy="60" r="3.2" fill="#E8B881" stroke="none"/>
+                <circle cx="186" cy="68" r="2.4" fill="#E8B881" stroke="none"/>
+                <circle cx="180" cy="75" r="1.8" fill="#E8B881" stroke="none"/>
+              </svg>
+            </div>
+            <div style="margin-top:14px;font:400 clamp(21px,4vw,27px)/1.42 'Newsreader',serif;color:#F7F3EA;letter-spacing:-0.005em;">
+              Abres el <span style="text-decoration:underline;text-decoration-color:rgba(232,184,129,0.85);text-underline-offset:5px;text-decoration-thickness:1.5px;">cajón</span> y un <span style="color:#E8B881;font-weight:600;">DRO</span>medario asoma la cabeza entre tus calcetines y braguitas y te escupe en plena cara.
+            </div>
+          </div>
+
+          <!-- PASO 3 · decir la historia en voz alta -->
+          <div style="margin-top:14px;border:1px solid rgba(232,184,129,0.4);background:rgba(232,184,129,0.08);border-radius:18px;padding:18px 16px;">
+            <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(232,184,129,0.18);border-radius:999px;padding:5px 13px;margin-bottom:14px;"><span style="font:700 11px 'Hanken Grotesk';letter-spacing:0.08em;color:#E8B881;">PASO 3</span><span style="font:500 12px 'Hanken Grotesk';color:rgba(244,239,231,0.7);">cierra los ojos e imagínala</span></div>
+            <button onClick="{{ sayDrawer }}" style="display:flex;align-items:center;justify-content:center;gap:11px;width:100%;background:#E8B881;color:#241F40;border:none;border-radius:14px;padding:16px;font:600 17px 'Hanken Grotesk';cursor:pointer;box-shadow:0 12px 26px -10px rgba(232,184,129,0.5);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#241F40" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9 c4 5 16 5 20 0"/><path d="M4 13 l-1.6 2.2"/><path d="M9 15 l-0.9 2.4"/><path d="M15 15 l0.9 2.4"/><path d="M20 13 l1.6 2.2"/></svg>
+              Cierra los ojos e imagínala en tu cabeza
+            </button>
+          </div>
+        </div>
+
+        <!-- 6 · continuar -->
+        <div style="text-align:center;margin-top:18px;">
+          <button onClick="{{ scrollToTry }}" style="display:inline-flex;align-items:center;gap:8px;background:none;border:1.5px solid rgba(34,28,22,0.18);border-radius:13px;padding:13px 26px;font:500 16px 'Newsreader',serif;color:#221C16;cursor:pointer;">
+            Continuar
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#221C16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9 l6 6 6 -6"/></svg>
+          </button>
+        </div>
+
+        <p style="text-align:center;font:400 clamp(20px,2.6vw,24px)/1.4 'Newsreader',serif;color:#221C16;margin:30px auto 0;max-width:420px;">No la memorizaste. Pero ya no se te va.</p>
+        </sc-if>
+
+        <!-- C · PRUEBA CON LA TUYA (live) -->
+        <div id="try" style="margin-top:30px;background:#FBF7F0;border:1px solid #E8E1D3;border-radius:24px;padding:clamp(22px,4vw,30px);box-shadow:0 18px 44px -28px rgba(40,34,24,0.4);">
+
+          <sc-if value="{{ livePick }}" hint-placeholder-val="{{ true }}">
+            <div style="text-align:center;">
+              <div style="font:500 13px 'Hanken Grotesk';letter-spacing:0.14em;text-transform:uppercase;color:#A99F90;">¿Quieres aprender otra palabra?</div>
+              <p style="font:400 clamp(20px,2.6vw,24px)/1.35 'Newsreader',serif;margin:12px auto 22px;max-width:380px;">Elige una y verás tu escena.</p>
+              <div style="display:flex;flex-wrap:wrap;gap:11px;justify-content:center;">
+                <sc-for list="{{ pickWords }}" as="w" hint-placeholder-count="5">
+                  <button onClick="{{ w.on }}" style="background:#fff;border:1.5px solid #E2DACB;border-radius:999px;padding:13px 22px;font:400 21px 'Newsreader',serif;color:#221C16;cursor:pointer;" style-hover="border-color:#2B2752;background:#FBF7F0;">{{ w.label }}</button>
+                </sc-for>
+              </div>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ liveAssoc }}">
+            <div style="text-align:center;animation:fadeUp .35s ease both;">
+              <div style="font:600 12px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#A99F90;">En español</div>
+              <div style="font:400 clamp(36px,9vw,48px)/1 'Newsreader',serif;letter-spacing:-0.015em;margin:10px 0 0;">{{ liveWord }}</div>
+              <div style="font:600 13px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#A99F90;margin:22px auto 14px;">En inglés</div>
+              <button onClick="{{ submitAssoc }}" style="display:flex;align-items:center;justify-content:center;gap:9px;width:100%;background:#2B2752;color:#F4EFE7;border:none;border-radius:14px;padding:16px;font:500 18px 'Newsreader',serif;cursor:pointer;box-shadow:0 14px 30px -12px rgba(43,39,82,0.5);"><svg width="18" height="18" viewBox="0 0 24 24" fill="#E8B881"><path d="M12 1 L13.8 9.5 L22 11.2 L13.8 13 L12 22 L10.2 13 L2 11.2 L10.2 9.5 Z"/></svg>Genera mi historia</button>
+              <div style="margin-top:12px;"><button onClick="{{ resetLive }}" style="background:none;border:none;font:500 14px 'Hanken Grotesk';color:#8B8174;cursor:pointer;">elegir otra</button></div>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ liveLoading }}">
+            <div style="text-align:center;padding:8px 0 4px;animation:fadeUp .3s ease both;">
+              <svg width="42" height="42" viewBox="0 0 64 64" style="animation:floaty 2.4s ease-in-out infinite;"><g fill="#2B2752"><ellipse cx="12" cy="29" rx="8.5" ry="13"/><ellipse cx="52" cy="29" rx="8.5" ry="13"/><path d="M16 26 C16 15 25 11 32 11 C39 11 48 15 48 26 C48 35 44 41 40 44 C40.5 49 41 53 38 57.5 C36 60.5 32 60.5 31 57.5 C30.2 55 31.5 51.5 33 49.5 C27 47 18 40 16 26 Z"/></g></svg>
+              <div style="display:flex;flex-direction:column;margin:16px auto 0;max-width:340px;">
+                <sc-for list="{{ loadingSteps }}" as="st" hint-placeholder-count="3">
+                  <div style="display:flex;align-items:flex-start;gap:11px;text-align:left;padding:7px 0;">
+                    <div style="width:22px;height:22px;flex:none;display:flex;align-items:center;justify-content:center;margin-top:1px;">
+                      <sc-if value="{{ st.done }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5C7A61" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" stroke="rgba(92,122,97,0.3)"/><path d="M7.5 12 l3 3 L16.5 8.5"/></svg></sc-if>
+                      <sc-if value="{{ st.active }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2B2752" stroke-width="2.4" stroke-linecap="round" style="animation:spin .9s linear infinite;"><path d="M12 3 a9 9 0 1 0 9 9"/></svg></sc-if>
+                      <sc-if value="{{ st.todo }}"><span style="width:7px;height:7px;border-radius:50%;background:#D2C8B7;"></span></sc-if>
+                    </div>
+                    <sc-if value="{{ st.lit }}"><span style="font:400 16px/1.4 'Newsreader',serif;color:#3E372E;">{{ st.label }}</span></sc-if>
+                    <sc-if value="{{ st.dim }}"><span style="font:400 16px/1.4 'Newsreader',serif;color:#B4AA9A;">{{ st.label }}</span></sc-if>
+                  </div>
+                </sc-for>
+              </div>
+              <div style="margin-top:14px;border-top:1px solid #EAE2D3;padding-top:14px;">
+                <p style="font:400 13.5px/1.55 'Hanken Grotesk';color:#8B8174;margin:0 auto;max-width:360px;">Tu cerebro recuerda una imagen rara muchísimo mejor que una pareja de palabras. La historia es solo un andamio: en unos días se cae sola y te queda la palabra.</p>
+              </div>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ liveDone }}">
+            <div style="animation:reveal .42s cubic-bezier(.16,1,.3,1) both;">
+              <div style="border-radius:22px;background:#241F40;padding:24px 22px;box-shadow:0 22px 46px -20px rgba(36,31,64,0.55);">
+                <div style="font:600 11px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:rgba(244,239,231,0.42);">{{ liveWord }} en inglés</div>
+                <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-top:6px;">
+                  <div style="font:500 clamp(36px,10vw,48px)/1 'Newsreader',serif;color:#F7F3EA;letter-spacing:-0.015em;">{{ sceneEng }}</div>
+                  <div style="font:400 16px 'Newsreader',serif;font-style:italic;color:rgba(244,239,231,0.55);">{{ scenePron }}</div>
+                </div>
+
+                <!-- PASO 1 · el puente del sonido -->
+                <div style="margin-top:22px;border:1px solid rgba(232,184,129,0.4);background:rgba(232,184,129,0.08);border-radius:18px;padding:18px 16px;">
+                  <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(232,184,129,0.18);border-radius:999px;padding:5px 13px;margin-bottom:14px;"><span style="font:700 11px 'Hanken Grotesk';letter-spacing:0.08em;color:#E8B881;">PASO 1</span><span style="font:500 12px 'Hanken Grotesk';color:rgba(244,239,231,0.7);">una palabra que suena igual</span></div>
+                  <div style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;">
+                    <span style="font:500 26px 'Newsreader',serif;color:#F7F3EA;">{{ sceneEng }}</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(232,184,129,0.7)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12 h13 M13 7 l5 5 -5 5"/></svg>
+                    <span style="font:700 22px 'Hanken Grotesk';color:#E8B881;letter-spacing:0.02em;">{{ sceneHook }}</span>
+                  </div>
+                  <div style="text-align:center;font:500 12.5px 'Hanken Grotesk';color:rgba(232,184,129,0.9);margin-top:10px;">{{ sceneGloss }}</div>
+                </div>
+
+                <!-- PASO 2 · la historia memorable -->
+                <div style="margin-top:14px;border:1px solid rgba(244,239,231,0.12);background:rgba(244,239,231,0.04);border-radius:18px;padding:18px 16px;">
+                  <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(244,239,231,0.1);border-radius:999px;padding:5px 13px;margin-bottom:14px;"><span style="font:700 11px 'Hanken Grotesk';letter-spacing:0.08em;color:#F4EFE7;">PASO 2</span><span style="font:500 12px 'Hanken Grotesk';color:rgba(244,239,231,0.7);">una historia que no se olvida</span></div>
+                <!-- ilustración de la escena (estilo línea, como el dromedario) -->
+                <div style="border-radius:14px;background:rgba(244,239,231,0.05);padding:12px;display:flex;justify-content:center;">
+                  <sc-if value="{{ isCojin }}">
+                    <svg viewBox="0 0 220 150" width="100%" style="max-width:230px;display:block;" fill="none" stroke="#F4EFE7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M44 86 q-8 -30 30 -34 q58 -6 86 4 q22 28 6 54 q-10 16 -42 16 q-58 4 -78 -10 q-12 -14 -2 -30 Z" fill="rgba(244,239,231,0.08)"/>
+                      <circle cx="100" cy="92" r="4" fill="#F4EFE7" stroke="none"/>
+                      <path d="M44 86 l-9 -7 M160 56 l9 -7 M166 108 l9 7 M52 122 l-9 7" stroke="rgba(244,239,231,0.6)" stroke-width="2.4"/>
+                      <line x1="118" y1="74" x2="168" y2="30" stroke="#E8B881" stroke-width="4.5"/>
+                      <path d="M168 30 l13 -9 l-1 11 l-9 4 z" fill="#E8B881" stroke="#E8B881"/>
+                      <path d="M118 74 l-8 7 l11 -1 z" fill="#E8B881" stroke="#E8B881"/>
+                      <path d="M150 56 l-9 7 M159 64 l-9 7" stroke="rgba(232,184,129,0.7)" stroke-width="2.2"/>
+                    </svg>
+                  </sc-if>
+                  <sc-if value="{{ isArmario }}">
+                    <svg viewBox="0 0 220 150" width="100%" style="max-width:210px;display:block;" fill="none" stroke="#F4EFE7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="78" y="30" width="64" height="104" rx="5" stroke="rgba(244,239,231,0.5)"/>
+                      <line x1="110" y1="30" x2="110" y2="134" stroke="rgba(244,239,231,0.4)"/>
+                      <path d="M78 34 L52 24 L52 126 L78 130" fill="rgba(244,239,231,0.06)"/>
+                      <path d="M142 34 L168 24 L168 126 L142 130" fill="rgba(244,239,231,0.06)"/>
+                      <path d="M96 52 q14 -7 28 0" stroke="rgba(244,239,231,0.7)" stroke-width="2.4"/>
+                      <line x1="110" y1="47" x2="110" y2="52" stroke="rgba(244,239,231,0.7)" stroke-width="2.4"/>
+                      <path d="M118 92 q20 6 30 -8" stroke="#E8B881" stroke-width="3.4"/>
+                      <path d="M148 84 q10 -2 14 6" stroke="#E8B881" stroke-width="3"/>
+                      <circle cx="120" cy="92" r="3" fill="#E8B881" stroke="none"/>
+                    </svg>
+                  </sc-if>
+                  <sc-if value="{{ isGrifo }}">
+                    <svg viewBox="0 0 220 150" width="100%" style="max-width:220px;display:block;" fill="none" stroke="#F4EFE7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M44 42 L44 66" stroke="rgba(244,239,231,0.85)"/>
+                      <path d="M44 50 Q70 50 86 64 L86 80" stroke="rgba(244,239,231,0.85)"/>
+                      <path d="M78 80 L94 80" stroke="rgba(244,239,231,0.85)"/>
+                      <line x1="44" y1="42" x2="44" y2="32" stroke="rgba(244,239,231,0.65)" stroke-width="2.4"/>
+                      <ellipse cx="44" cy="29" rx="9" ry="4" stroke="rgba(244,239,231,0.65)" stroke-width="2.4"/>
+                      <g transform="translate(156 44) rotate(-26)">
+                        <rect x="-15" y="-12" width="30" height="24" rx="7" fill="rgba(232,184,129,0.22)" stroke="#E8B881" stroke-width="3"/>
+                        <line x1="-15" y1="-3.5" x2="15" y2="-3.5" stroke="rgba(232,184,129,0.55)" stroke-width="1.6"/>
+                        <line x1="-15" y1="4" x2="15" y2="4" stroke="rgba(232,184,129,0.55)" stroke-width="1.6"/>
+                      </g>
+                      <path d="M108 56 l16 -9 M114 66 l16 -9" stroke="rgba(232,184,129,0.7)" stroke-width="2.4"/>
+                      <path d="M86 82 q1 11 5 20" stroke="#A9733E" stroke-width="3"/>
+                      <circle cx="92" cy="100" r="3" fill="#A9733E" stroke="none"/>
+                      <path d="M58 126 C55 113 73 111 81 116 C79 104 98 102 101 113 C104 101 120 103 117 115 C129 116 131 126 120 126 Z" fill="rgba(154,107,62,0.45)" stroke="#A9733E" stroke-width="2.6"/>
+                      <path d="M76 118 q9 -4 17 0 M92 111 q6 -3 12 0" stroke="#A9733E" stroke-width="2" opacity="0.7"/>
+                      <path d="M132 104 q5 -7 0 -14 M142 108 q5 -7 0 -14" stroke="rgba(244,239,231,0.4)" stroke-width="2"/>
+                    </svg>
+                  </sc-if>
+                  <sc-if value="{{ isBanera }}">
+                    <svg viewBox="0 0 220 150" width="100%" style="max-width:230px;display:block;" fill="none" stroke="#F4EFE7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M40 86 L180 86 Q176 122 150 122 L70 122 Q44 122 40 86 Z" fill="rgba(244,239,231,0.06)"/>
+                      <line x1="34" y1="86" x2="186" y2="86" stroke="rgba(244,239,231,0.5)"/>
+                      <ellipse cx="46" cy="74" rx="5" ry="8" stroke="rgba(244,239,231,0.5)" stroke-width="2.4"/>
+                      <circle cx="108" cy="100" r="12" stroke="#F4EFE7"/>
+                      <path d="M118 92 q20 -10 18 -34" stroke="#E8B881" stroke-width="4"/>
+                      <path d="M136 58 q0 -8 8 -8 q8 0 8 8 l0 8" stroke="#E8B881" stroke-width="4"/>
+                      <circle cx="103" cy="98" r="2" fill="#241F40" stroke="none"/>
+                    </svg>
+                  </sc-if>
+                  <sc-if value="{{ isColchon }}">
+                    <svg viewBox="0 0 220 150" width="100%" style="max-width:230px;display:block;" fill="none" stroke="#F4EFE7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="34" y="92" width="152" height="34" rx="14" fill="rgba(244,239,231,0.07)"/>
+                      <path d="M58 92 v6 M84 92 v6 M110 92 v6 M136 92 v6 M162 92 v6" stroke="rgba(244,239,231,0.4)" stroke-width="2"/>
+                      <path d="M70 92 q4 -14 16 -16" stroke="rgba(232,184,129,0.7)" stroke-width="2.4"/>
+                      <circle cx="150" cy="84" r="9" stroke="#E8B881" stroke-width="3"/>
+                      <path d="M158 80 l8 -4 M159 86 l8 2" stroke="#E8B881" stroke-width="2.4"/>
+                      <circle cx="147" cy="83" r="2" fill="#E8B881" stroke="none"/>
+                      <path d="M96 80 q6 -8 14 -2" stroke="rgba(232,184,129,0.6)" stroke-width="2.2"/>
+                    </svg>
+                  </sc-if>
+                  <sc-if value="{{ isGenericArt }}">
+                    <svg viewBox="0 0 220 150" width="100%" style="max-width:150px;display:block;" fill="none">
+                      <g fill="rgba(244,239,231,0.85)"><ellipse cx="60" cy="78" rx="20" ry="30"/><ellipse cx="160" cy="78" rx="20" ry="30"/><path d="M70 72 C70 46 92 36 110 36 C128 36 150 46 150 72 C150 96 140 110 130 118 C131 130 132 140 124 150 L96 150 C88 140 89 130 90 118 C80 110 70 96 70 72 Z"/></g>
+                      <path d="M176 34 l3 11 l11 3 l-11 3 l-3 11 l-3 -11 l-11 -3 l11 -3 z" fill="#E8B881"/>
+                    </svg>
+                  </sc-if>
+                </div>
+
+                  <div style="margin-top:14px;font:400 clamp(21px,4vw,27px)/1.42 'Newsreader',serif;color:#F7F3EA;letter-spacing:-0.005em;">{{ sceneNode }}</div>
+                </div>
+                <div style="margin-top:18px;border:1px solid rgba(232,184,129,0.4);background:rgba(232,184,129,0.08);border-radius:16px;padding:15px 14px;">
+                  <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(232,184,129,0.18);border-radius:999px;padding:5px 12px;margin-bottom:12px;"><span style="font:700 11px 'Hanken Grotesk';letter-spacing:0.08em;color:#E8B881;">PASO 3</span><span style="font:500 12px 'Hanken Grotesk';color:rgba(244,239,231,0.7);">cierra los ojos e imagínala</span></div>
+                  <button onClick="{{ sayEng }}" style="display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:#E8B881;color:#241F40;border:none;border-radius:13px;padding:14px;font:600 16px 'Hanken Grotesk';cursor:pointer;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#241F40" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9 c4 5 16 5 20 0"/><path d="M4 13 l-1.6 2.2"/><path d="M9 15 l-0.9 2.4"/><path d="M15 15 l0.9 2.4"/><path d="M20 13 l1.6 2.2"/></svg>
+                    Cierra los ojos e imagínala en tu cabeza
+                  </button>
+                </div>
+              </div>
+              <p style="text-align:center;font:400 19px/1.4 'Newsreader',serif;font-style:italic;color:#3E372E;margin:22px auto 0;max-width:380px;">Mañana seguirá ahí. Y dentro de un año.</p>
+              <div style="text-align:center;margin-top:20px;"><button onClick="{{ scrollToScience }}" style="display:inline-flex;align-items:center;gap:8px;background:#2B2752;color:#F4EFE7;border:none;border-radius:14px;padding:16px 30px;font:500 18px 'Newsreader',serif;cursor:pointer;box-shadow:0 14px 30px -12px rgba(43,39,82,0.5);">Continuar <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F4EFE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9 l6 6 6 -6"/></svg></button></div>
+              <div style="text-align:center;margin-top:12px;"><button onClick="{{ resetLive }}" style="background:none;border:none;font:500 14px 'Hanken Grotesk';color:#8B8174;cursor:pointer;text-decoration:underline;text-underline-offset:3px;">Aprender otra</button></div>
+            </div>
+          </sc-if>
+
+        </div>
+      </div>
+    </sc-if>
+  </section>
+
+  <!-- ================= S4b · LA CUENTA ================= -->
+  <section id="lacuenta" style="position:relative;scroll-snap-align:start;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:clamp(56px,10vw,96px) clamp(20px,5vw,40px);background:#241F40;color:#F4EFE7;">
+    <div style="font:500 13px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:rgba(244,239,231,0.45);margin-bottom:24px;">La cuenta es simple</div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:clamp(24px,5vw,40px);width:100%;max-width:500px;">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
+        <div style="font:400 clamp(52px,12vw,64px)/1 'Newsreader',serif;letter-spacing:-0.02em;">5</div>
+        <div style="font:400 clamp(19px,3.5vw,26px) 'Newsreader',serif;font-style:italic;color:rgba(244,239,231,0.7);">palabras al día</div>
+      </div>
+      <div style="width:1px;height:clamp(28px,5vw,44px);background:rgba(244,239,231,0.2);"></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
+        <div ref="{{ countRef }}" style="font:400 clamp(52px,12vw,64px)/1 'Newsreader',serif;letter-spacing:-0.02em;">{{ countNum }}</div>
+        <div style="font:400 clamp(19px,3.5vw,26px) 'Newsreader',serif;font-style:italic;color:rgba(244,239,231,0.7);">palabras en un año</div>
+      </div>
+      <div style="width:1px;height:clamp(28px,5vw,44px);background:rgba(244,239,231,0.2);"></div>
+      <div style="border:1.5px solid rgba(232,184,129,0.6);border-radius:22px;padding:clamp(20px,4vw,28px) clamp(22px,5vw,36px);">
+        <div style="font:400 clamp(22px,5vw,34px)/1.2 'Newsreader',serif;color:#F7F3EA;">Con 1.500 palabras ya hablas<br><span style="font-style:italic;">un idioma de verdad.</span></div>
+        <div style="font:500 14px 'Hanken Grotesk';color:rgba(244,239,231,0.5);margin-top:10px;">El vocabulario mínimo para cualquier conversación</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S4b2 · ELIGE TU NIVEL ================= -->
+  <section style="position:relative;scroll-snap-align:start;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:clamp(44px,9vw,68px) clamp(22px,6vw,30px);">
+    <div style="width:100%;max-width:400px;margin:0 auto;">
+
+        <!-- HOOK -->
+        <div style="text-align:center;">
+          <div style="font:500 13px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#A99F90;">Desde cero hasta fluido</div>
+          <h2 style="font:400 clamp(30px,7.6vw,40px)/1.08 'Newsreader',serif;letter-spacing:-0.02em;margin:13px 0 0;">Hay sitio para <span style="font-style:italic;color:#2B2752;">todos los niveles</span>.</h2>
+          <p style="font:500 14.5px/1.45 'Hanken Grotesk';color:#7C7264;margin:13px auto 0;max-width:300px;">Empiezas donde estás. Elephant sube contigo.</p>
+        </div>
+
+        <!-- EL CAMINO -->
+        <div style="position:relative;margin-top:64px;height:108px;">
+          <!-- línea sólida bajo los 3 hitos -->
+          <div style="position:absolute;left:14px;width:calc(72% - 14px);top:43px;height:2px;background:#2B2752;border-radius:2px;"></div>
+          <!-- continuación punteada -->
+          <div style="position:absolute;left:72%;right:32px;top:43px;height:0;border-top:2px dotted #C9823F;"></div>
+          <!-- flecha -->
+          <svg style="position:absolute;right:4px;top:34px;" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9823F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12 h13 M13 6 l6 6 -6 6"/></svg>
+          <!-- sin techo -->
+          <span style="position:absolute;right:0;top:6px;font:600 11px 'Hanken Grotesk';letter-spacing:0.06em;text-transform:uppercase;color:#C9823F;">sin techo</span>
+
+          <!-- 3 hitos -->
+          <div style="display:flex;justify-content:space-between;width:72%;">
+            <div style="display:flex;flex-direction:column;align-items:center;">
+              <span style="font:500 17px 'Newsreader',serif;color:#221C16;margin-bottom:12px;">2.000</span>
+              <span style="width:15px;height:15px;border-radius:50%;background:#2B2752;border:3px solid #F4EFE7;box-shadow:0 0 0 1.5px #2B2752;"></span>
+              <span style="font:500 14px 'Hanken Grotesk';color:#6E655A;margin-top:14px;">Principiante</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;">
+              <span style="font:500 17px 'Newsreader',serif;color:#221C16;margin-bottom:11px;">3.000</span>
+              <span style="width:19px;height:19px;border-radius:50%;background:#2B2752;border:3px solid #F4EFE7;box-shadow:0 0 0 1.5px #2B2752;"></span>
+              <span style="font:500 14px 'Hanken Grotesk';color:#6E655A;margin-top:13px;">Intermedio</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;">
+              <span style="font:500 17px 'Newsreader',serif;color:#221C16;margin-bottom:9px;">+5.000</span>
+              <span style="width:23px;height:23px;border-radius:50%;background:#E8B881;border:3px solid #F4EFE7;box-shadow:0 0 0 1.5px #E8B881;"></span>
+              <span style="font:500 14px 'Hanken Grotesk';color:#6E655A;margin-top:12px;">Avanzado</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </section>
+
+  <!-- ================= S4c · LA APP POR DENTRO ================= -->
+  <section style="position:relative;scroll-snap-align:start;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:clamp(44px,9vw,72px) clamp(20px,5vw,32px);background:#EFE8DB;border-top:1px solid #E3DBCC;border-bottom:1px solid #E3DBCC;">
+    <div style="text-align:center;margin-bottom:26px;">
+        <div style="font:500 13px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#A99F90;">Así se ve por dentro</div>
+        <h2 style="font:400 clamp(28px,7vw,38px)/1.1 'Newsreader',serif;letter-spacing:-0.02em;margin:14px 0 0;">Cinco minutos al día.<br><span style="font-style:italic;color:#2B2752;">Memoria de años.</span></h2>
+      </div>
+
+      <!-- mockup de la app -->
+      <div style="width:100%;max-width:340px;background:#FBF7F0;border:1px solid #E8E1D3;border-radius:28px;padding:22px 20px 24px;box-shadow:0 30px 60px -28px rgba(40,34,24,0.45);">
+
+        <!-- header -->
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <svg width="22" height="22" viewBox="0 0 64 64"><g fill="#221C16"><ellipse cx="12" cy="29" rx="8.5" ry="13"/><ellipse cx="52" cy="29" rx="8.5" ry="13"/><path d="M16 26 C16 15 25 11 32 11 C39 11 48 15 48 26 C48 35 44 41 40 44 C40.5 49 41 53 38 57.5 C36 60.5 32 60.5 31 57.5 C30.2 55 31.5 51.5 33 49.5 C27 47 18 40 16 26 Z"/></g></svg>
+            <span style="font:600 16px 'Newsreader',serif;">Elephant</span>
+          </div>
+          <span style="font:500 12px 'Hanken Grotesk';color:#A99F90;">Martes, 22 jun</span>
+        </div>
+
+        <!-- 1 · ACCIÓN DEL DÍA -->
+        <div style="margin-top:18px;background:#241F40;border-radius:20px;padding:20px;color:#F4EFE7;">
+          <div style="font:500 12px 'Hanken Grotesk';letter-spacing:0.14em;text-transform:uppercase;color:rgba(244,239,231,0.5);">Tu sesión de hoy</div>
+          <div style="display:flex;align-items:baseline;gap:10px;margin-top:8px;">
+            <span style="font:500 48px/0.95 'Newsreader',serif;color:#F7F3EA;">5</span>
+            <span style="font:400 18px 'Newsreader',serif;font-style:italic;color:rgba(244,239,231,0.72);">palabras nuevas</span>
+          </div>
+          <div style="font:500 12px 'Hanken Grotesk';color:rgba(244,239,231,0.5);margin-top:8px;">+ 15 para repasar · menos de 5 minutos</div>
+          <button style="display:flex;align-items:center;justify-content:center;gap:9px;width:100%;margin-top:18px;background:#E8B881;color:#241F40;border:none;border-radius:13px;padding:15px;font:600 17px 'Hanken Grotesk';cursor:pointer;">
+            Empezar
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#241F40" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12 h13 M13 6 l6 6 -6 6"/></svg>
+          </button>
+        </div>
+
+        <!-- 2 · TU PROGRESO (héroe) -->
+        <div style="margin-top:16px;background:#fff;border:1px solid #EDE6D8;border-radius:20px;padding:20px;">
+          <div style="font:600 11.5px 'Hanken Grotesk';letter-spacing:0.14em;text-transform:uppercase;color:#A99F90;">Desde que empezaste</div>
+          <div style="display:flex;align-items:baseline;gap:11px;margin-top:8px;">
+            <span style="font:500 56px/0.9 'Newsreader',serif;color:#2B2752;">236</span>
+            <span style="font:500 15px/1.3 'Hanken Grotesk';color:#6E655A;">palabras ya<br>son <span style="color:#2B2752;">tuyas</span></span>
+          </div>
+
+          <!-- barra · nivel actual -->
+          <div style="margin-top:26px;margin-right:24px;">
+            <div style="position:relative;height:10px;border-radius:6px;background:#ECE4D6;">
+              <div style="position:absolute;left:16%;top:-20px;transform:translateX(-50%);font:700 12px 'Hanken Grotesk';color:#2B2752;white-space:nowrap;">16%</div>
+              <div style="position:absolute;left:0;top:0;bottom:0;width:16%;background:#2B2752;border-radius:6px;"></div>
+              <div style="position:absolute;left:16%;top:50%;width:14px;height:14px;border-radius:50%;background:#E8B881;border:2.5px solid #fff;transform:translate(-50%,-50%);box-shadow:0 2px 6px -1px rgba(40,34,24,0.4);"></div>
+              <div style="position:absolute;right:0;top:-20px;transform:translateX(50%);font:700 12px 'Hanken Grotesk';color:#8B8174;white-space:nowrap;">1.500</div>
+              <div style="position:absolute;right:0;top:50%;width:13px;height:13px;border-radius:50%;background:#fff;border:2px solid #C4BBAA;transform:translate(50%,-50%);"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:11px;">
+              <span style="font:600 12px 'Hanken Grotesk';color:#2B2752;">Principiante</span>
+              <span style="font:600 12px 'Hanken Grotesk';color:#2B2752;transform:translateX(50%);display:inline-block;">Intermedio</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </section>
+
+  <!-- ================= S4d · QUÉ RECUERDA MEJOR TU CEREBRO ================= -->
+  <section id="science" style="position:relative;scroll-snap-align:start;position:relative;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:clamp(48px,10vw,80px) clamp(24px,6vw,40px);">
+    <div style="font:500 13px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#A99F90;margin-bottom:24px;">Por qué «no» funciona</div>
+    <h2 style="font:400 clamp(32px,9vw,46px)/1.12 'Newsreader',serif;letter-spacing:-0.02em;margin:0;max-width:600px;">Tu cerebro no olvida idiomas.<br><span style="font-style:italic;color:#2B2752;">Olvida lo aburrido.</span></h2>
+    <div onClick="{{ scrollToProceso }}" style="position:absolute;bottom:28px;left:0;right:0;display:flex;justify-content:center;cursor:pointer;">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#A99F90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation:nudge 1.8s ease-in-out infinite;"><path d="M6 9 l6 6 6 -6"/></svg>
+    </div>
+  </section>
+
+  <!-- ================= S5 · CREDIBILIDAD ================= -->
+  <section style="position:relative;scroll-snap-align:start;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:clamp(48px,10vw,80px) clamp(20px,5vw,32px);">
+    <div style="text-align:center;margin-bottom:30px;">
+      <div style="font:500 13px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#A99F90;">Lo que cuentan</div>
+      <h2 style="font:400 clamp(28px,7vw,38px)/1.12 'Newsreader',serif;letter-spacing:-0.02em;margin:14px 0 0;">Se les quedó. De verdad.</h2>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:16px;width:100%;max-width:420px;">
+      <div style="background:#FBF7F0;border:1px solid #EBE4D7;border-radius:18px;padding:20px 22px;box-shadow:0 16px 36px -22px rgba(40,34,24,0.4);transform:rotate(-1.6deg);">
+        <p style="font:400 19px/1.45 'Newsreader',serif;margin:0;">“Recuerdo palabras de hace meses sin esforzarme. Es lo primero que de verdad se me queda.”</p>
+        <div style="display:flex;align-items:center;gap:9px;margin-top:14px;"><div style="width:30px;height:30px;border-radius:50%;background:#E8D9C2;color:#8A6E4B;display:flex;align-items:center;justify-content:center;font:600 13px 'Hanken Grotesk';">L</div><div><span style="font:600 14px 'Hanken Grotesk';color:#221C16;">Lucía M.</span> <span style="font:500 13px 'Hanken Grotesk';color:#A99F90;">· 4 meses</span></div></div>
+      </div>
+      <div style="background:#FBF7F0;border:1px solid #EBE4D7;border-radius:18px;padding:20px 22px;box-shadow:0 16px 36px -22px rgba(40,34,24,0.4);transform:rotate(1.4deg);">
+        <p style="font:400 19px/1.45 'Newsreader',serif;margin:0;">“Llevaba años empezando inglés y olvidándolo. Esta es la primera vez que no se me cae.”</p>
+        <div style="display:flex;align-items:center;gap:9px;margin-top:14px;"><div style="width:30px;height:30px;border-radius:50%;background:#D6C7E0;color:#5B4A73;display:flex;align-items:center;justify-content:center;font:600 13px 'Hanken Grotesk';">D</div><div><span style="font:600 14px 'Hanken Grotesk';color:#221C16;">Diego R.</span> <span style="font:500 13px 'Hanken Grotesk';color:#A99F90;">· 2 meses</span></div></div>
+      </div>
+      <div style="background:#FBF7F0;border:1px solid #EBE4D7;border-radius:18px;padding:20px 22px;box-shadow:0 16px 36px -22px rgba(40,34,24,0.4);transform:rotate(-0.8deg);">
+        <p style="font:400 19px/1.45 'Newsreader',serif;margin:0;">“Las escenas son tan absurdas que me río sola. Y justo por eso no las olvido.”</p>
+        <div style="display:flex;align-items:center;gap:9px;margin-top:14px;"><div style="width:30px;height:30px;border-radius:50%;background:#C9DBC4;color:#4E6B4A;display:flex;align-items:center;justify-content:center;font:600 13px 'Hanken Grotesk';">M</div><div><span style="font:600 14px 'Hanken Grotesk';color:#221C16;">Marta P.</span> <span style="font:500 13px 'Hanken Grotesk';color:#A99F90;">· 6 meses</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S6 · LA OFERTA ================= -->
+  <section style="position:relative;scroll-snap-align:start;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:64px 26px;background:#EFE8DB;border-top:1px solid #E3DBCC;">
+    <h2 style="font:400 clamp(26px,7vw,34px)/1.15 'Newsreader',serif;letter-spacing:-0.01em;margin:0 0 14px;max-width:560px;">Recordar, de verdad, lo que estudias.</h2>
+    <p style="font:400 clamp(18px,2.4vw,21px)/1.5 'Newsreader',serif;color:#5A5249;margin:0 auto 36px;max-width:420px;">No pagas una app. Pagas no volver a empezar de cero cada pocos meses.</p>
+
+    <div style="background:#F4EFE7;border:1px solid #E2DACB;border-radius:24px;padding:clamp(26px,5vw,36px);width:100%;max-width:380px;box-shadow:0 30px 60px -30px rgba(40,34,24,0.4);">
+      <div style="font:500 13px 'Hanken Grotesk';letter-spacing:0.06em;text-transform:uppercase;color:#2B2752;">Elephant · acceso completo</div>
+      <div style="display:flex;align-items:baseline;justify-content:center;gap:9px;margin-top:16px;">
+        <span style="font:500 clamp(44px,10vw,52px)/1 'Newsreader',serif;">59 €</span>
+        <span style="font:500 17px 'Hanken Grotesk';color:#8B8174;">/ año</span>
+      </div>
+      <div style="font:400 16px 'Newsreader',serif;font-style:italic;color:#6E655A;margin-top:8px;">Las primeras palabras, gratis. Pagas cuando ya sientas que funciona.</div>
+      <button onClick="{{ goCheckout }}" style="width:100%;margin-top:26px;background:#2B2752;color:#F4EFE7;border:none;border-radius:15px;padding:19px;font:500 18px 'Newsreader',serif;cursor:pointer;box-shadow:0 16px 32px -12px rgba(43,39,82,0.55);">Sigue con tu palabra y 5 más</button>
+      <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;font:500 13px 'Hanken Grotesk';color:#7C7264;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7C7264" stroke-width="1.8"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11 V8 a4 4 0 0 1 8 0 v3"/></svg>
+        Garantía de 30 días
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:9px;margin-top:46px;opacity:0.6;">
+      <svg width="22" height="22" viewBox="0 0 64 64"><g fill="#221C16"><ellipse cx="12" cy="29" rx="8.5" ry="13"/><ellipse cx="52" cy="29" rx="8.5" ry="13"/><path d="M16 26 C16 15 25 11 32 11 C39 11 48 15 48 26 C48 35 44 41 40 44 C40.5 49 41 53 38 57.5 C36 60.5 32 60.5 31 57.5 C30.2 55 31.5 51.5 33 49.5 C27 47 18 40 16 26 Z"/></g></svg>
+      <span style="font:400 15px 'Newsreader',serif;font-style:italic;color:#8B8174;">Un elefante nunca olvida.</span>
+    </div>
+  </section>
+
+  <!-- ================= CHECKOUT OVERLAY ================= -->
+  <sc-if value="{{ isCheckout }}">
+    <div style="position:fixed;inset:0;z-index:100;background:#F4EFE7;overflow:auto;animation:reveal .35s ease both;font-family:'Newsreader',serif;">
+      <div style="max-width:440px;margin:0 auto;padding:24px 24px 64px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:6px 0 22px;">
+          <button onClick="{{ goLanding }}" style="display:inline-flex;align-items:center;gap:7px;background:none;border:none;font:500 15px 'Hanken Grotesk';color:#6E655A;cursor:pointer;">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#6E655A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5 l-7 7 7 7"/></svg>Volver
+          </button>
+          <div style="display:inline-flex;align-items:center;gap:7px;font:600 12px 'Hanken Grotesk';color:#7C7264;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5C7A61" stroke-width="1.9"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11 V8 a4 4 0 0 1 8 0 v3"/></svg>Seguro</div>
+        </div>
+
+        <div style="text-align:center;margin-bottom:24px;">
+          <h2 style="font:400 clamp(26px,5vw,34px)/1.15 'Newsreader',serif;letter-spacing:-0.01em;margin:0;">Recordar para siempre lo que estudias.</h2>
+          <p style="font:400 16px 'Newsreader',serif;font-style:italic;color:#6E655A;margin:12px 0 0;">{{ carryLine }}</p>
+        </div>
+
+        <div style="background:#FBF7F0;border:1px solid #EBE4D7;border-radius:18px;padding:18px 20px;display:flex;align-items:center;gap:14px;margin-bottom:22px;">
+          <div style="width:46px;height:46px;border-radius:12px;background:#2B2752;display:flex;align-items:center;justify-content:center;flex:none;"><svg width="28" height="28" viewBox="0 0 64 64"><g fill="#F4EFE7"><ellipse cx="12" cy="29" rx="8.5" ry="13"/><ellipse cx="52" cy="29" rx="8.5" ry="13"/><path d="M16 26 C16 15 25 11 32 11 C39 11 48 15 48 26 C48 35 44 41 40 44 C40.5 49 41 53 38 57.5 C36 60.5 32 60.5 31 57.5 C30.2 55 31.5 51.5 33 49.5 C27 47 18 40 16 26 Z"/></g></svg></div>
+          <div style="flex:1;text-align:left;"><div style="font:600 16px 'Hanken Grotesk';">Elephant · acceso completo</div><div style="font:500 13px 'Hanken Grotesk';color:#8B8174;">Plan anual · garantía 30 días</div></div>
+          <div style="font:500 20px 'Newsreader',serif;color:#2B2752;">59 €</div>
+        </div>
+
+        <input type="email" placeholder="tu@correo.com" style="width:100%;background:#fff;border:1.5px solid #E2DACB;border-radius:12px;padding:14px 15px;font:500 15px 'Hanken Grotesk';color:#221C16;margin-bottom:11px;" />
+        <div style="background:#fff;border:1.5px solid #E2DACB;border-radius:12px;overflow:hidden;margin-bottom:11px;">
+          <div style="display:flex;align-items:center;padding:0 15px;border-bottom:1.5px solid #E2DACB;">
+            <input placeholder="1234 1234 1234 1234" style="flex:1;background:none;border:none;padding:14px 0;font:500 15px 'Hanken Grotesk';color:#221C16;" />
+            <div style="display:flex;gap:5px;">
+              <div style="width:28px;height:18px;border-radius:4px;background:#1A1F71;display:flex;align-items:center;justify-content:center;font:700 7px 'Hanken Grotesk';color:#fff;">VISA</div>
+              <div style="width:28px;height:18px;border-radius:4px;background:#EB611C;position:relative;"><div style="position:absolute;left:6px;top:3px;width:11px;height:11px;border-radius:50%;background:#EB001B;"></div><div style="position:absolute;left:11px;top:3px;width:11px;height:11px;border-radius:50%;background:#F79E1B;mix-blend-mode:multiply;"></div></div>
+            </div>
+          </div>
+          <div style="display:flex;">
+            <input placeholder="MM / AA" style="flex:1;background:none;border:none;border-right:1.5px solid #E2DACB;padding:14px 15px;font:500 15px 'Hanken Grotesk';color:#221C16;" />
+            <input placeholder="CVC" style="flex:1;background:none;border:none;padding:14px 15px;font:500 15px 'Hanken Grotesk';color:#221C16;" />
+          </div>
+        </div>
+        <input placeholder="Nombre y apellidos" style="width:100%;background:#fff;border:1.5px solid #E2DACB;border-radius:12px;padding:14px 15px;font:500 15px 'Hanken Grotesk';color:#221C16;margin-bottom:20px;" />
+
+        <button onClick="{{ paySuccess }}" style="display:flex;align-items:center;justify-content:center;gap:9px;width:100%;background:#2B2752;color:#F4EFE7;border:none;border-radius:14px;padding:18px;font:500 18px 'Newsreader',serif;cursor:pointer;box-shadow:0 16px 32px -12px rgba(43,39,82,0.55);"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F4EFE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11 V8 a4 4 0 0 1 8 0 v3"/></svg>Empezar · 59 €</button>
+        <div style="text-align:center;font:500 12px 'Hanken Grotesk';color:#A99F90;margin-top:13px;">Pagos cifrados · cancela cuando quieras</div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ================= SUCCESS OVERLAY ================= -->
+  <sc-if value="{{ isSuccess }}">
+    <div style="position:fixed;inset:0;z-index:110;background:#241F40;color:#F4EFE7;overflow:auto;display:flex;align-items:center;justify-content:center;animation:reveal .4s ease both;font-family:'Newsreader',serif;">
+      <div style="max-width:440px;width:100%;padding:48px 28px;text-align:center;">
+        <div style="width:88px;height:88px;border-radius:50%;background:rgba(244,239,231,0.1);display:flex;align-items:center;justify-content:center;margin:0 auto 26px;">
+          <div style="width:60px;height:60px;border-radius:50%;background:#5C7A61;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#F4EFE7" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12 l5 5 L20 6"/></svg></div>
+        </div>
+        <h2 style="font:400 clamp(32px,6vw,44px)/1.1 'Newsreader',serif;letter-spacing:-0.01em;margin:0;color:#F7F3EA;">Bienvenido a Elephant.</h2>
+        <p style="font:400 18px/1.55 'Newsreader',serif;color:rgba(244,239,231,0.72);margin:16px auto 0;max-width:360px;">{{ successLine }}</p>
+        <div style="margin-top:32px;"><button onClick="{{ goLanding }}" style="background:#F4EFE7;color:#241F40;border:none;border-radius:14px;padding:17px 34px;font:500 17px 'Newsreader',serif;cursor:pointer;">Abrir Elephant</button></div>
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    view: 'landing',
+    beatDone: false,
+    curatedStage: 'input',   // input | loading | revealed
+    repeatMode: false,
+    loadStep: 0,
+    live: 'pick',          // pick | assoc | loading | done
+    userWord: '',
+    userAssoc: '',
+    scene: null,
+    count: 0,
+  };
+
+  constructor(props) {
+    super(props);
+    this.curatedRef = React.createRef();
+    this.wordRef = React.createRef();
+    this.assocRef = React.createRef();
+    this.demoRef = React.createRef();
+    this.repWordRef = React.createRef();
+    this.repTrackRef = React.createRef();
+    this.countRef = React.createRef();
+    this._counted = false;
+    this._beatStarted = false;
+  }
+
+  componentDidMount() {
+    this._onScroll = () => {
+      if (this._beatStarted) return;
+      const n = this.demoRef && this.demoRef.current;
+      if (!n) return;
+      if (n.getBoundingClientRect().top < window.innerHeight * 0.55) this.startBeat();
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._initCheck = setTimeout(this._onScroll, 400);
+    this._startReps();
+    this._setupCounter();
+  }
+
+  _setupCounter() {
+    const check = () => {
+      if (this._counted) { clearInterval(this._countPoll); return; }
+      const el = this.countRef && this.countRef.current;
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      if (!(r.top < window.innerHeight && r.bottom > 0 && r.left < window.innerWidth && r.right > 0)) return;
+      this._counted = true;
+      clearInterval(this._countPoll);
+      const target = 1825, dur = 1100, t0 = performance.now();
+      const tick = (now) => {
+        const p = Math.min(1, (now - t0) / dur);
+        const e = 1 - Math.pow(1 - p, 3);
+        this.setState({ count: Math.round(target * e) });
+        if (p < 1) this._countRAF = requestAnimationFrame(tick);
+        else this.setState({ count: target });
+      };
+      this._countRAF = requestAnimationFrame(tick);
+    };
+    this._countPoll = setInterval(check, 200);
+    check();
+  }
+
+  _startReps() {
+    if (this._repStarted) return;
+    const track = this.repTrackRef.current;
+    const words = track ? [].slice.call(track.querySelectorAll('[data-rep]')) : [];
+    if (!track || !words.length) { this._repWait = setTimeout(() => this._startReps(), 200); return; }
+    this._repStarted = true;
+    const tw0 = track.offsetWidth || 380;
+    words.forEach((el, k) => { el._x = -(k + 1) * (tw0 / words.length) - 80; el._was = false; el._base = el.style.color; });
+    const tick = () => {
+      const tw = track.offsetWidth;
+      words.forEach((el) => {
+        const ew = el.offsetWidth, center = tw / 2 - ew / 2;
+        el._x += 6;
+        if (el._x > tw + 40) el._x = -ew - 40;
+        el.style.transform = 'translate(' + el._x + 'px,-50%)';
+        const at = Math.abs(el._x - center) < ew * 0.22;
+        if (at && !el._was) {
+          el._was = true; el.style.color = '#2B6FDB'; el.style.fontWeight = '600';
+          this.setState(s => ({ reps: (s.reps || 0) + 1 }));
+        } else if (!at && el._was) {
+          el._was = false; el.style.color = el._base; el.style.fontWeight = '400';
+        }
+      });
+      this._repRAF = requestAnimationFrame(tick);
+    };
+    this._repRAF = requestAnimationFrame(tick);
+  }
+
+  startBeat() {
+    if (this._beatStarted) return;
+    this._beatStarted = true;
+    this._beatTimer = setTimeout(() => this.setState({ beatDone: true }), 2100);
+  }
+
+  componentWillUnmount() {
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+    if (this._beatTimer) clearTimeout(this._beatTimer);
+    if (this._initCheck) clearTimeout(this._initCheck);
+    if (this._stepTimer) clearInterval(this._stepTimer);
+    if (this._revealTimer) clearTimeout(this._revealTimer);
+    if (this._repRAF) cancelAnimationFrame(this._repRAF);
+    if (this._repWait) clearTimeout(this._repWait);
+    if (this._countPoll) clearInterval(this._countPoll);
+    if (this._countRAF) cancelAnimationFrame(this._countRAF);
+  }
+
+  speak(word) {
+    try {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(word);
+      u.lang = 'en-US';
+      u.rate = 0.9;
+      window.speechSynthesis.speak(u);
+    } catch (e) {}
+  }
+
+  scrollToTry() {
+    const e = document.getElementById('try');
+    if (e) window.scrollTo({ top: e.getBoundingClientRect().top + window.scrollY - 24, behavior: 'smooth' });
+  }
+
+  scrollToId(id) {
+    const e = document.getElementById(id);
+    if (!e) return;
+    const r = e.getBoundingClientRect();
+    const left = Math.max(0, r.left + window.scrollX - 48);
+    const top = r.top + window.scrollY;
+    window.scrollTo({ left, top, behavior: 'smooth' });
+    const se = document.scrollingElement;
+    if (se) { try { se.scrollTo({ left, top, behavior: 'smooth' }); } catch (_) { se.scrollLeft = left; se.scrollTop = top; } }
+  }
+
+  scrollToDemo() {
+    this.scrollToId('demo');
+    this.startBeat();
+  }
+
+  pickWord(w) {
+    this.setState({ userWord: w, userAssoc: '', scene: null, live: 'assoc' });
+  }
+
+  startLoadSteps() {
+    if (this._stepTimer) clearInterval(this._stepTimer);
+    this._stepTimer = setInterval(() => {
+      this.setState((s) => (s.loadStep >= 2 ? null : { loadStep: s.loadStep + 1 }));
+    }, 1350);
+  }
+
+  checkCurated() {
+    if (this.state.curatedStage !== 'input') return;
+    const el = this.curatedRef && this.curatedRef.current;
+    const val = (el ? el.value : '').trim().toLowerCase().replace(/^(a |an |the )/, '');
+    if (!val) return;
+    if (val === 'drawer') {
+      this.setState({ curatedStage: 'success' });
+      window.scrollTo({ top: window.scrollY, behavior: 'smooth' });
+    } else {
+      this.revealCurated();
+    }
+  }
+
+  revealCurated() {
+    if (this.state.curatedStage !== 'input') return;
+    this.setState({ curatedStage: 'loading', loadStep: 0 });
+    this.startLoadSteps();
+    this._revealTimer = setTimeout(() => {
+      if (this._stepTimer) clearInterval(this._stepTimer);
+      this.setState({ curatedStage: 'revealed' });
+    }, 4300);
+  }
+
+  submitAssoc() {
+    this.setState({ userAssoc: '', live: 'loading', loadStep: 0 }, () => {
+      this.startLoadSteps();
+      this._liveStart = Date.now();
+      this.runGenerate();
+    });
+  }
+
+  fallbackScene(word, assoc) {
+    const curated = {
+      'armario': { eng: 'wardrobe', hook: 'GUARDA + ROPA', gloss: 'suena como wardrobe', pron: '/ˈwɔːd.roʊb/',
+        scene: 'Abres el armario y un GUARDA de seguridad te ROBA toda la ropa de un tirón.' },
+      'grifo': { eng: 'tap', hook: 'TAPÓN', gloss: 'suena como tap', pron: '/tæp/',
+        scene: 'Abres el grifo de la bañera pero hay un TAPón de corcho enorme bloqueando, de repente sale disparado y se llena todo de mierda en vez de agua.' },
+      'bañera': { eng: 'bathtub', hook: 'BATA + TUBO', gloss: 'suena como bathtub', pron: '/ˈbɑːθ.tʌb/',
+        scene: 'Te metes en la bañera con una BATA puesta y respirando por un TUBO de buceo.' },
+      'cojín': { eng: 'cushion', hook: 'CUCHIllo', gloss: 'suena como cushion', pron: '/ˈkʊʃ.ən/',
+        scene: 'Te sientas en el cojín y de dentro sale disparado un CUCHIllo que te pincha el trasero.' },
+      'colchón': { eng: 'mattress', hook: 'MAta + tRES', gloss: 'suena como mattress', pron: '/ˈmæt.rəs/',
+        scene: 'Saltas en el colchón y de un bote MAtas a tRES ratones que dormían debajo.' },
+    };
+    const hit = curated[word.toLowerCase()];
+    if (hit) return hit;
+    const eng = word;
+    return {
+      eng: eng,
+      hook: assoc ? assoc.toUpperCase() : eng.toUpperCase(),
+      gloss: 'suena como ' + eng,
+      pron: '',
+      scene: 'Aparece un «' + word + '» y, de golpe, hace algo imposible y ridículo que suena como «' + eng + '»; la escena es tan absurda que se te queda grabada.',
+    };
+  }
+
+  async runGenerate() {
+    const word = this.state.userWord;
+    const assoc = this.state.userAssoc;
+    let scene = null;
+    const curatedWords = ['armario', 'grifo', 'bañera', 'cojín', 'colchón'];
+    if (curatedWords.indexOf((word || '').toLowerCase()) !== -1) {
+      scene = this.fallbackScene(word, assoc);
+    }
+    try {
+      if (!scene && window.claude && window.claude.complete) {
+        const prompt =
+          'Eres un experto en mnemotecnia para aprender vocabulario en inglés.\n' +
+          'Palabra en ESPAÑOL que el usuario quiere aprender: "' + word + '".\n' +
+          'Sigue EXACTAMENTE este método, copiando el estilo de este ejemplo:\n' +
+          'cojín → cushion. Gancho: una palabra española cuyo sonido imite a "cushion" → "CUCHIllo" (CUCHI suena como CUSHI-on). Escena: "Te sientas en el cojín y de dentro sale disparado un CUCHIllo que te pincha el trasero."\n' +
+          'Pasos: 1) Traduce la palabra al inglés (la más común y cotidiana). 2) Busca una o dos palabras EN ESPAÑOL cuyo sonido imite al de la palabra inglesa; escríbelas con las letras que coinciden en MAYÚSCULAS. 3) Escribe una escena absurda, vívida y física (algo te pincha, te golpea, te persigue), en segunda persona, 1 o 2 frases, máximo 3 elementos, usando esa palabra-gancho con sus letras en MAYÚSCULAS dentro de la frase. Cuanto más ridícula y sensorial, mejor se recuerda.\n' +
+          'Responde SOLO con JSON válido, sin texto adicional, con esta forma exacta:\n' +
+          '{"eng":"la palabra en inglés en minúsculas","hook":"PALABRAS ESPAÑOLAS DEL GANCHO en MAYÚSCULAS, por ejemplo GUARDA + ROPA","gloss":"suena como la_palabra_inglesa","pron":"pronunciación aproximada entre barras, por ejemplo /ˈwɔːd.roʊb/","scene":"la escena en 1-2 frases"}';
+        const raw = await Promise.race([
+          window.claude.complete(prompt),
+          new Promise((_, rej) => setTimeout(() => rej('timeout'), 13000)),
+        ]);
+        const m = raw && raw.match(/\{[\s\S]*\}/);
+        if (m) {
+          const parsed = JSON.parse(m[0]);
+          if (parsed && parsed.scene && parsed.eng) scene = parsed;
+        }
+      }
+    } catch (e) {
+      scene = null;
+    }
+    if (!scene) scene = this.fallbackScene(word, assoc);
+    if (this._stepTimer) clearInterval(this._stepTimer);
+    const elapsed = Date.now() - (this._liveStart || 0);
+    const wait = Math.max(0, 3600 - elapsed); // mínimo para que se lean los micro-pasos
+    setTimeout(() => this.setState({ scene, loadStep: 2, live: 'done' }), wait);
+  }
+
+  makeLoadingSteps() {
+    const step = this.state.loadStep;
+    const curated = this.state.curatedStage === 'loading';
+    const labels = curated
+      ? ['Escuchando cómo suena «drawer»… «dro».', 'Buscando una palabra que ya conoces y suena igual…', 'Montando una sola escena, rara y vívida.']
+      : ['Escuchando cómo suena en inglés…', 'Buscando una palabra que ya conoces y suena igual…', 'Montando una sola escena, rara y vívida.'];
+    return labels.map((label, i) => ({
+      label,
+      done: i < step,
+      active: i === step,
+      todo: i > step,
+      lit: i <= step,
+      dim: i > step,
+    }));
+  }
+
+  renderVals() {
+    const s = this.state;
+    const sc = s.scene || {};
+    const word = s.userWord;
+    return {
+      demoRef: this.demoRef,
+      countRef: this.countRef,
+      countNum: String(this.state.count || 0).replace(/\B(?=(\d{3})+(?!\d))/g, '.'),
+      repWord: this.repWordRef,
+      repTrack: this.repTrackRef,
+      reps: s.reps || 0,
+      curatedRef: this.curatedRef,
+      onCuratedKey: (e) => { if (e.key === 'Enter') this.checkCurated(); },
+      wordRef: this.wordRef,
+      assocRef: this.assocRef,
+
+      isCheckout: s.view === 'checkout',
+      isSuccess: s.view === 'success',
+
+      notRevealed: s.curatedStage === 'input',
+      curatedLoading: s.curatedStage === 'loading',
+      curatedRevealed: s.curatedStage === 'revealed',
+      curatedSuccess: s.curatedStage === 'success',
+      curatedReady: s.curatedStage === 'revealed' || s.curatedStage === 'success',
+      showCuratedCard: s.curatedStage === 'revealed' && !s.repeatMode,
+      loadingSteps: this.makeLoadingSteps(),
+      beatDone: s.beatDone,
+      notBeatDone: !s.beatDone,
+
+      livePick: s.live === 'pick',
+      liveAssoc: s.live === 'assoc',
+      liveLoading: s.live === 'loading',
+      liveDone: s.live === 'done',
+
+      pickWords: ['armario', 'grifo', 'bañera', 'cojín', 'colchón'].map((label) => ({
+        label,
+        on: () => this.pickWord(label),
+      })),
+
+      liveWord: word,
+      sceneEng: sc.eng || '',
+      sceneHook: sc.hook || '',
+      sceneGloss: sc.gloss || '',
+      scenePron: sc.pron || '',
+      sceneText: sc.scene || '',
+      sceneNode: (() => { const txt = sc.scene || ''; const parts = []; const re = /[A-ZÁÉÍÓÚÜÑ]{2,}/g; let last = 0, m, i = 0; while ((m = re.exec(txt)) !== null) { if (m.index > last) parts.push(txt.slice(last, m.index)); parts.push(React.createElement('span', { key: 'h' + (i++), style: { color: '#E8B881', fontWeight: 600 } }, m[0])); last = m.index + m[0].length; } if (last < txt.length) parts.push(txt.slice(last)); return parts; })(),
+      isCojin: (word || '').toLowerCase() === 'cojín',
+      isArmario: (word || '').toLowerCase() === 'armario',
+      isGrifo: (word || '').toLowerCase() === 'grifo',
+      isBanera: (word || '').toLowerCase() === 'bañera',
+      isColchon: (word || '').toLowerCase() === 'colchón',
+      isGenericArt: ['cojín', 'armario', 'grifo', 'bañera', 'colchón'].indexOf((word || '').toLowerCase()) === -1,
+
+      carryLine: word
+        ? 'Tu palabra «' + word + '» te está esperando dentro, ya con su escena.'
+        : 'Tus primeras palabras te esperan dentro, ya con su escena.',
+      successLine: word
+        ? 'Tu palabra «' + word + '» ya está guardada con su escena. Te esperan 5 más — y un repaso justo a tiempo.'
+        : 'Tus primeras 5 palabras te esperan dentro, cada una con su escena y su repaso justo a tiempo.',
+
+      scrollToDemo: () => this.scrollToDemo(),
+      scrollToMetodo: () => this.scrollToId('metodo'),
+      scrollToCerebro: () => this.scrollToId('science'),
+      scrollToProceso: () => this.scrollToId('proceso'),
+      scrollToTry: () => this.scrollToTry(),
+      scrollToScience: () => this.scrollToId('lacuenta'),
+      sayDrawer: () => this.speak('drawer'),
+      sayEng: () => this.speak(sc.eng || ''),
+      revealCurated: () => this.revealCurated(),
+      onAssocKey: (e) => { if (e.key === 'Enter') this.submitAssoc(); },
+      submitAssoc: () => this.submitAssoc(),
+      resetLive: () => { this.setState({ live: 'pick', userWord: '', userAssoc: '', scene: null, loadStep: 0, repeatMode: true }, () => this.scrollToTry()); },
+      goCheckout: () => { this.setState({ view: 'checkout' }); window.scrollTo(0, 0); },
+      goLanding: () => this.setState({ view: 'landing' }),
+      paySuccess: () => { this.setState({ view: 'success' }); window.scrollTo(0, 0); },
+    };
+  }
+}
+</script>
+</body>
+</html>

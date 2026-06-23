@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  ::selection { background: #E8B881; color: #241F40; }
+  @page { size: A4; margin: 0; }
+  @media print {
+    body { background: #fff !important; }
+    .bb-gutter { background: #fff !important; padding: 0 !important; gap: 0 !important; }
+    .bb-page { box-shadow: none !important; break-after: page; break-inside: avoid; }
+  }
+</style>
+</helmet>
+
+<div class="bb-gutter" style="background:#D9D2C6;padding:40px 24px;display:flex;flex-direction:column;align-items:center;gap:30px;min-height:100vh;font-family:'Newsreader',serif;">
+
+  <!-- ============ 01 · PORTADA ============ -->
+  <div class="bb-page" data-screen-label="Portada" style="position:relative;width:794px;height:1123px;flex:none;background:#2B2752;color:#F4EFE7;box-shadow:0 24px 60px -28px rgba(20,16,40,0.6);overflow:hidden;">
+    <div style="position:absolute;inset:0;background:radial-gradient(120% 80% at 50% 8%, rgba(232,184,129,0.10), transparent 60%);"></div>
+    <div style="position:absolute;top:54px;left:60px;right:60px;display:flex;justify-content:space-between;align-items:center;">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <svg width="26" height="26" viewBox="0 0 64 64"><g fill="#F4EFE7"><ellipse cx="12" cy="29" rx="8.5" ry="13"/><ellipse cx="52" cy="29" rx="8.5" ry="13"/><path d="M16 26 C16 15 25 11 32 11 C39 11 48 15 48 26 C48 35 44 41 40 44 C40.5 49 41 53 38 57.5 C36 60.5 32 60.5 31 57.5 C30.2 55 31.5 51.5 33 49.5 C27 47 18 40 16 26 Z"/></g></svg>
+        <span style="font:600 18px 'Newsreader',serif;letter-spacing:-0.01em;">Elephant</span>
+      </div>
+      <span style="font:500 12px 'Hanken Grotesk';letter-spacing:0.18em;text-transform:uppercase;color:rgba(244,239,231,0.5);">v1.0 · 2025</span>
+    </div>
+
+    <div style="position:absolute;top:50%;left:60px;right:60px;transform:translateY(-50%);">
+      <svg width="92" height="92" viewBox="0 0 64 64" style="margin-bottom:38px;"><g fill="#E8B881"><ellipse cx="12" cy="29" rx="8.5" ry="13"/><ellipse cx="52" cy="29" rx="8.5" ry="13"/><path d="M16 26 C16 15 25 11 32 11 C39 11 48 15 48 26 C48 35 44 41 40 44 C40.5 49 41 53 38 57.5 C36 60.5 32 60.5 31 57.5 C30.2 55 31.5 51.5 33 49.5 C27 47 18 40 16 26 Z"/></g></svg>
+      <div style="font:500 13px 'Hanken Grotesk';letter-spacing:0.28em;text-transform:uppercase;color:rgba(232,184,129,0.9);">Manual de marca</div>
+      <h1 style="font:300 96px/0.98 'Newsreader',serif;letter-spacing:-0.03em;margin:18px 0 0;">Elephant</h1>
+      <p style="font:400 italic 27px/1.4 'Newsreader',serif;color:rgba(244,239,231,0.72);margin:26px 0 0;max-width:520px;">Un elefante nunca olvida — y nuestra marca tampoco deja que tú lo hagas.</p>
+    </div>
+
+    <div style="position:absolute;bottom:54px;left:60px;right:60px;display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid rgba(244,239,231,0.18);padding-top:20px;">
+      <span style="font:400 15px 'Newsreader',serif;color:rgba(244,239,231,0.6);">Identidad visual y verbal</span>
+      <span style="font:500 12px 'Hanken Grotesk';letter-spacing:0.1em;color:rgba(244,239,231,0.45);">Documento interno · diseño + desarrollo</span>
+    </div>
+  </div>
+
+  <!-- ============ 02 · ÍNDICE ============ -->
+  <div class="bb-page" data-screen-label="Índice" style="position:relative;width:794px;height:1123px;flex:none;background:#F4EFE7;color:#221C16;box-shadow:0 24px 60px -28px rgba(20,16,40,0.35);padding:72px 64px 60px;">
+    <div style="font:500 12px 'Hanken Grotesk';letter-spacing:0.22em;text-transform:uppercase;color:#A99F90;">Contenido</div>
+    <h2 style="font:300 52px/1.04 'Newsreader',serif;letter-spacing:-0.02em;margin:14px 0 48px;">Qué hay dentro</h2>
+
+    <div style="display:flex;flex-direction:column;">
+      <div style="display:flex;align-items:baseline;gap:18px;padding:17px 0;border-top:1px solid #E3DBCC;"><span style="font:500 14px 'Hanken Grotesk';color:#B0917E;width:34px;flex:none;">01</span><span style="font:400 23px 'Newsreader',serif;flex:1;">La marca · esencia y promesa</span><span style="font:500 13px 'Hanken Grotesk';color:#A99F90;">03</span></div>
+      <div style="display:flex;align-items:baseline;gap:18px;padding:17px 0;border-top:1px solid #E3DBCC;"><span style="font:500 14px 'Hanken Grotesk';color:#B0917E;width:34px;flex:none;">02</span><span style="font:400 23px 'Newsreader',serif;flex:1;">Personalidad y tono de voz</span><span style="font:500 13px 'Hanken Grotesk';color:#A99F90;">04</span></div>
+      <div style="display:flex;align-items:baseline;gap:18px;padding:17px 0;border-top:1px solid #E3DBCC;"><span style="font:500 14px 'Hanken Grotesk';color:#B0917E;width:34px;flex:none;">03</span><span style="font:400 23px 'Newsreader',serif;flex:1;">Logotipo · construcción y respeto</span><span style="font:500 13px 'Hanken Grotesk';color:#A99F90;">05</span></div>
+      <div style="display:flex;align-items:baseline;gap:18px;padding:17px 0;border-top:1px solid #E3DBCC;"><span style="font:500 14px 'Hanken Grotesk';color:#B0917E;width:34px;flex:none;">04</span><span style="font:400 23px 'Newsreader',serif;flex:1;">Logotipo · usos incorrectos</span><span style="font:500 13px 'Hanken Grotesk';color:#A99F90;">06</span></div>
+      <div style="display:flex;align-items:baseline;gap:18px;padding:17px 0;border-top:1px solid #E3DBCC;"><span style="font:500 14px 'Hanken Grotesk';color:#B0917E;width:34px;flex:none;">05</span><span style="font:400 23px 'Newsreader',serif;flex:1;">Color</span><span style="font:500 13px 'Hanken Grotesk';color:#A99F90;">07</span></div>
+      <div style="display:flex;align-items:baseline;gap:18px;padding:17px 0;border-top:1px solid #E3DBCC;"><span style="font:500 14px 'Hanken Grotesk';color:#B0917E;width:34px;flex:none;">06</span><span style="font:400 23px 'Newsreader',serif;flex:1;">Tipografía</span><span style="font:500 13px 'Hanken Grotesk';color:#A99F90;">08</span></div>
+      <div style="display:flex;align-items:baseline;gap:18px;padding:17px 0;border-top:1px solid #E3DBCC;"><span style="font:500 14px 'Hanken Grotesk';color:#B0917E;width:34px;flex:none;">07</span><span style="font:400 23px 'Newsreader',serif;flex:1;">Lenguaje de ilustración · las escenas</span><span style="font:500 13px 'Hanken Grotesk';color:#A99F90;">09</span></div>
+      <div style="display:flex;align-items:baseline;gap:18px;padding:17px 0;border-top:1px solid #E3DBCC;"><span style="font:500 14px 'Hanken Grotesk';color:#B0917E;width:34px;flex:none;">08</span><span style="font:400 23px 'Newsreader',serif;flex:1;">Componente héroe · la tarjeta de escena</span><span style="font:500 13px 'Hanken Grotesk';color:#A99F90;">10</span></div>
+      <div style="display:flex;align-items:baseline;gap:18px;padding:17px 0;border-top:1px solid #E3DBCC;"><span style="font:500 14px 'Hanken Grotesk';color:#B0917E;width:34px;flex:none;">09</span><span style="font:400 23px 'Newsreader',serif;flex:1;">Componentes de interfaz</span><span style="font:500 13px 'Hanken Grotesk';color:#A99F90;">11</span></div>
+      <div style="display:flex;align-items:baseline;gap:18px;padding:17px 0;border-top:1px solid #E3DBCC;border-bottom:1px solid #E3DBCC;"><span style="font:500 14px 'Hanken Grotesk';color:#B0917E;width:34px;flex:none;">10</span><span style="font:400 23px 'Newsreader',serif;flex:1;">Movimiento y tokens de desarrollo</span><span style="font:500 13px 'Hanken Grotesk';color:#A99F90;">12</span></div>
+    </div>
+
+    <div style="position:absolute;bottom:48px;left:64px;right:64px;display:flex;justify-content:space-between;font:500 11px 'Hanken Grotesk';letter-spacing:0.12em;text-transform:uppercase;color:#B7AE9F;"><span>Elephant · Manual de marca</span><span>02</span></div>
+  </div>
+
+  <!-- ============ 03 · LA MARCA ============ -->
+  <div class="bb-page" data-screen-label="La marca" style="position:relative;width:794px;height:1123px;flex:none;background:#F4EFE7;color:#221C16;box-shadow:0 24px 60px -28px rgba(20,16,40,0.35);padding:72px 64px 60px;">
+    <div style="font:500 12px 'Hanken Grotesk';letter-spacing:0.22em;text-transform:uppercase;color:#A99F90;">01 · La marca</div>
+    <h2 style="font:300 52px/1.04 'Newsreader',serif;letter-spacing:-0.02em;margin:14px 0 0;">No enseñamos inglés.<br><span style="font-style:italic;color:#2B2752;">Hacemos que lo recuerdes.</span></h2>
+    <p style="font:400 21px/1.5 'Newsreader',serif;color:#4A4339;margin:26px 0 0;max-width:600px;">Elephant es una app de vocabulario que convierte cada palabra en una escena imposible de olvidar. No repites: recuerdas. El nombre lo dice todo — <span style="font-style:italic;">un elefante nunca olvida</span>.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px;">
+      <div style="background:#fff;border:1px solid #E8E1D3;border-radius:18px;padding:26px;">
+        <div style="font:600 12px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#5C7A61;">La promesa</div>
+        <p style="font:400 22px/1.4 'Newsreader',serif;margin:14px 0 0;">«Aprende una palabra hoy. <span style="font-style:italic;color:#2B2752;">Recuérdala dentro de diez años.</span>»</p>
+      </div>
+      <div style="background:#fff;border:1px solid #E8E1D3;border-radius:18px;padding:26px;">
+        <div style="font:600 12px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#B0917E;">El mecanismo</div>
+        <p style="font:400 19px/1.45 'Newsreader',serif;margin:14px 0 0;color:#4A4339;">Mnemotecnia — un <strong style="font-weight:600;color:#2B2752;">gancho fonético</strong> + una <strong style="font-weight:600;color:#2B2752;">escena absurda</strong> — reforzada con repetición espaciada.</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px;">
+      <div style="background:#EFE8DB;border-radius:18px;padding:26px;">
+        <div style="font:600 12px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#5C7A61;margin-bottom:16px;">Elephant es…</div>
+        <div style="display:flex;flex-direction:column;gap:11px;font:400 17px/1.35 'Newsreader',serif;color:#3E372E;">
+          <div style="display:flex;gap:10px;"><span style="color:#5C7A61;">✓</span> Cálido, ingenioso, un poco travieso</div>
+          <div style="display:flex;gap:10px;"><span style="color:#5C7A61;">✓</span> Editorial y silencioso — una idea por pantalla</div>
+          <div style="display:flex;gap:10px;"><span style="color:#5C7A61;">✓</span> Memorable por la historia, no por la palabra</div>
+          <div style="display:flex;gap:10px;"><span style="color:#5C7A61;">✓</span> Honesto sobre la ciencia de la memoria</div>
+        </div>
+      </div>
+      <div style="background:#EFE8DB;border-radius:18px;padding:26px;">
+        <div style="font:600 12px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#B5524A;margin-bottom:16px;">Elephant no es…</div>
+        <div style="display:flex;flex-direction:column;gap:11px;font:400 17px/1.35 'Newsreader',serif;color:#3E372E;">
+          <div style="display:flex;gap:10px;"><span style="color:#B5524A;">✕</span> Gamificado — sin rachas ni rankings</div>
+          <div style="display:flex;gap:10px;"><span style="color:#B5524A;">✕</span> Ruidoso, infantil o lleno de emojis</div>
+          <div style="display:flex;gap:10px;"><span style="color:#B5524A;">✕</span> Un curso de gramática</div>
+          <div style="display:flex;gap:10px;"><span style="color:#B5524A;">✕</span> Otra app de repetir hasta odiarlo</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="position:absolute;bottom:48px;left:64px;right:64px;display:flex;justify-content:space-between;font:500 11px 'Hanken Grotesk';letter-spacing:0.12em;text-transform:uppercase;color:#B7AE9F;"><span>Elephant · Manual de marca</span><span>03</span></div>
+  </div>
+
+  <!-- ============ 04 · PERSONALIDAD Y TONO ============ -->
+  <div class="bb-page" data-screen-label="Tono de voz" style="position:relative;width:794px;height:1123px;flex:none;background:#F4EFE7;color:#221C16;box-shadow:0 24px 60px -28px rgba(20,16,40,0.35);padding:72px 64px 60px;">
+    <div style="font:500 12px 'Hanken Grotesk';letter-spacing:0.22em;text-transform:uppercase;color:#A99F90;">02 · Personalidad</div>
+    <h2 style="font:300 52px/1.04 'Newsreader',serif;letter-spacing:-0.02em;margin:14px 0 0;">Cómo suena<br>Elephant</h2>
+
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:30px;">
+      <span style="font:500 14px 'Hanken Grotesk';color:#2B2752;background:#fff;border:1px solid #E2DAC9;border-radius:999px;padding:9px 18px;">Cálido</span>
+      <span style="font:500 14px 'Hanken Grotesk';color:#2B2752;background:#fff;border:1px solid #E2DAC9;border-radius:999px;padding:9px 18px;">Ingenioso</span>
+      <span style="font:500 14px 'Hanken Grotesk';color:#2B2752;background:#fff;border:1px solid #E2DAC9;border-radius:999px;padding:9px 18px;">Directo</span>
+      <span style="font:500 14px 'Hanken Grotesk';color:#2B2752;background:#fff;border:1px solid #E2DAC9;border-radius:999px;padding:9px 18px;">Sensorial</span>
+      <span style="font:500 14px 'Hanken Grotesk';color:#2B2752;background:#fff;border:1px solid #E2DAC9;border-radius:999px;padding:9px 18px;">Sin rodeos</span>
+      <span style="font:500 14px 'Hanken Grotesk';color:#2B2752;background:#fff;border:1px solid #E2DAC9;border-radius:999px;padding:9px 18px;">Un poco travieso</span>
+    </div>
+
+    <div style="margin-top:38px;display:flex;flex-direction:column;gap:14px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+        <div style="background:#fff;border:1px solid #E8E1D3;border-radius:16px;padding:22px;">
+          <div style="font:600 11px 'Hanken Grotesk';letter-spacing:0.14em;text-transform:uppercase;color:#5C7A61;margin-bottom:12px;">Decimos</div>
+          <p style="font:400 19px/1.4 'Newsreader',serif;margin:0;">«Abres el cajón y un DROmedario asoma la cabeza entre tus calcetines.»</p>
+        </div>
+        <div style="background:#fff;border:1px solid #E8E1D3;border-radius:16px;padding:22px;">
+          <div style="font:600 11px 'Hanken Grotesk';letter-spacing:0.14em;text-transform:uppercase;color:#B5524A;margin-bottom:12px;">No decimos</div>
+          <p style="font:400 19px/1.4 'Newsreader',serif;margin:0;color:#8B8174;">«Drawer significa cajón. Repítelo 10 veces para memorizarlo.»</p>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+        <div style="background:#fff;border:1px solid #E8E1D3;border-radius:16px;padding:22px;">
+          <div style="font:600 11px 'Hanken Grotesk';letter-spacing:0.14em;text-transform:uppercase;color:#5C7A61;margin-bottom:12px;">Decimos</div>
+          <p style="font:400 19px/1.4 'Newsreader',serif;margin:0;">«¿Seguirás acordándote dentro de un año?»</p>
+        </div>
+        <div style="background:#fff;border:1px solid #E8E1D3;border-radius:16px;padding:22px;">
+          <div style="font:600 11px 'Hanken Grotesk';letter-spacing:0.14em;text-transform:uppercase;color:#B5524A;margin-bottom:12px;">No decimos</div>
+          <p style="font:400 19px/1.4 'Newsreader',serif;margin:0;color:#8B8174;">«¡Aprende 5000 palabras rápido! 🚀🔥»</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:32px;background:#2B2752;border-radius:18px;padding:30px 32px;color:#F4EFE7;">
+      <div style="font:600 11px 'Hanken Grotesk';letter-spacing:0.18em;text-transform:uppercase;color:rgba(232,184,129,0.9);margin-bottom:14px;">Tres reglas de oro</div>
+      <div style="display:flex;flex-direction:column;gap:12px;font:400 19px/1.45 'Newsreader',serif;">
+        <div><span style="color:#E8B881;font-style:italic;">Una idea por pantalla.</span> Nunca dos. El silencio es parte del mensaje.</div>
+        <div><span style="color:#E8B881;font-style:italic;">La historia es la protagonista,</span> no la palabra inglesa.</div>
+        <div><span style="color:#E8B881;font-style:italic;">Apela a los sentidos.</span> Lo concreto y absurdo se recuerda; lo abstracto se olvida.</div>
+      </div>
+    </div>
+
+    <div style="position:absolute;bottom:48px;left:64px;right:64px;display:flex;justify-content:space-between;font:500 11px 'Hanken Grotesk';letter-spacing:0.12em;text-transform:uppercase;color:#B7AE9F;"><span>Elephant · Manual de marca</span><span>04</span></div>
+  </div>
+
+  <!-- ============ 05 · LOGOTIPO CONSTRUCCIÓN ============ -->
+  <div class="bb-page" data-screen-label="Logotipo" style="position:relative;width:794px;height:1123px;flex:none;background:#F4EFE7;color:#221C16;box-shadow:0 24px 60px -28px rgba(20,16,40,0.35);padding:72px 64px 60px;">
+    <div style="font:500 12px 'Hanken Grotesk';letter-spacing:0.22em;text-transform:uppercase;color:#A99F90;">03 · Logotipo</div>
+    <h2 style="font:300 52px/1.04 'Newsreader',serif;letter-spacing:-0.02em;margin:14px 0 0;">La marca</h2>
+    <p style="font:400 19px/1.5 'Newsreader',serif;color:#4A4339;margin:20px 0 0;max-width:560px;">El símbolo es un elefante de trazo lleno — orejas abiertas, trompa curva. Siempre acompañado del nombre en <strong style="font-weight:600;">Newsreader 600</strong>. El conjunto es discreto: vive en la esquina, nunca grita.</p>
+
+    <div style="margin-top:34px;background:#fff;border:1px solid #E8E1D3;border-radius:20px;padding:48px;display:flex;align-items:center;justify-content:center;gap:18px;">
+      <svg width="64" height="64" viewBox="0 0 64 64"><g fill="#221C16"><ellipse cx="12" cy="29" rx="8.5" ry="13"/><ellipse cx="52" cy="29" rx="8.5" ry="13"/><path d="M16 26 C16 15 25 11 32 11 C39 11 48 15 48 26 C48 35 44 41 40 44 C40.5 49 41 53 38 57.5 C36 60.5 32 60.5 31 57.5 C30.2 55 31.5 51.5 33 49.5 C27 47 18 40 16 26 Z"/></g></svg>
+      <span style="font:600 46px 'Newsreader',serif;letter-spacing:-0.01em;">Elephant</span>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px;">
+      <div style="background:#fff;border:1px solid #E8E1D3;border-radius:18px;padding:24px;">
+        <div style="font:600 12px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#A99F90;margin-bottom:18px;">Área de respeto</div>
+        <div style="position:relative;background:#F4EFE7;border-radius:12px;padding:30px;display:flex;align-items:center;justify-content:center;">
+          <div style="position:absolute;inset:14px;border:1px dashed #CDBFA8;border-radius:8px;"></div>
+          <svg width="48" height="48" viewBox="0 0 64 64"><g fill="#221C16"><ellipse cx="12" cy="29" rx="8.5" ry="13"/><ellipse cx="52" cy="29" rx="8.5" ry="13"/><path d="M16 26 C16 15 25 11 32 11 C39 11 48 15 48 26 C48 35 44 41 40 44 C40.5 49 41 53 38 57.5 C36 60.5 32 60.5 31 57.5 C30.2 55 31.5 51.5 33 49.5 C27 47 18 40 16 26 Z"/></g></svg>
+        </div>
+        <p style="font:400 15px/1.4 'Hanken Grotesk';color:#6E655A;margin:14px 0 0;">Reserva un margen igual a la altura de la oreja por cada lado. Nada invade ese espacio.</p>
+      </div>
+      <div style="background:#fff;border:1px solid #E8E1D3;border-radius:18px;padding:24px;">
+        <div style="font:600 12px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#A99F90;margin-bottom:18px;">Tamaño mínimo</div>
+        <div style="background:#F4EFE7;border-radius:12px;padding:30px;display:flex;align-items:center;justify-content:center;gap:18px;">
+          <div style="text-align:center;"><svg width="20" height="20" viewBox="0 0 64 64"><g fill="#221C16"><ellipse cx="12" cy="29" rx="8.5" ry="13"/><ellipse cx="52" cy="29" rx="8.5" ry="13"/><path d="M16 26 C16 15 25 11 32 11 C39 11 48 15 48 26 C48 35 44 41 40 44 C40.5 49 41 53 38 57.5 C36 60.5 32 60.5 31 57.5 C30.2 55 31.5 51.5 33 49.5 C27 47 18 40 16 26 Z"/></g></svg><div style="font:500 10px 'Hanken Grotesk';color:#A99F90;margin-top:6px;">20 px icono</div></div>
+          <div style="text-align:center;"><span style="font:600 17px 'Newsreader',serif;">Elephant</span><div style="font:500 10px 'Hanken Grotesk';color:#A99F90;margin-top:6px;">17 px texto</div></div>
+        </div>
+        <p style="font:400 15px/1.4 'Hanken Grotesk';color:#6E655A;margin:14px 0 0;">Por debajo de 20 px el icono pierde el trazo. En digital, el lockup vive a 17 px (como en la app).</p>
+      </div>
+    </div>
+
+    <div style="margin-top:18px;display:flex;gap:14px;">
+      <div style="flex:1;background:#2B2752;border-radius:14px;padding:24px;display:flex;flex-direction:column;align-items:center;gap:12px;"><svg width="40" height="40" viewBox="0 0 64 64"><g fill="#F4EFE7"><ellipse cx="12" cy="29" rx="8.5" ry="13"/><ellipse cx="52" cy="29" rx="8.5" ry="13"/><path d="M16 26 C16 15 25 11 32 11 C39 11 48 15 48 26 C48 35 44 41 40 44 C40.5 49 41 53 38 57.5 C36 60.5 32 60.5 31 57.5 C30.2 55 31.5 51.5 33 49.5 C27 47 18 40 16 26 Z"/></g></svg><span style="font:500 11px 'Hanken Grotesk';color:rgba(244,239,231,0.6);">Crema sobre índigo</span></div>
+      <div style="flex:1;background:#E8B881;border-radius:14px;padding:24px;display:flex;flex-direction:column;align-items:center;gap:12px;"><svg width="40" height="40" viewBox="0 0 64 64"><g fill="#241F40"><ellipse cx="12" cy="29" rx="8.5" ry="13"/><ellipse cx="52" cy="29" rx="8.5" ry="13"/><path d="M16 26 C16 15 25 11 32 11 C39 11 48 15 48 26 C48 35 44 41 40 44 C40.5 49 41 53 38 57.5 C36 60.5 32 60.5 31 57.5 C30.2 55 31.5 51.5 33 49.5 C27 47 18 40 16 26 Z"/></g></svg><span style="font:500 11px 'Hanken Grotesk';color:#5E4C2A;">Tinta sobre dorado</span></div>
+      <div style="flex:1;background:#F4EFE7;border:1px solid #E3DBCC;border-radius:14px;padding:24px;display:flex;flex-direction:column;align-items:center;gap:12px;"><svg width="40" height="40" viewBox="0 0 64 64"><g fill="#221C16"><ellipse cx="12" cy="29" rx="8.5" ry="13"/><ellipse cx="52" cy="29" rx="8.5" ry="13"/><path d="M16 26 C16 15 25 11 32 11 C39 11 48 15 48 26 C48 35 44 41 40 44 C40.5 49 41 53 38 57.5 C36 60.5 32 60.5 31 57.5 C30.2 55 31.5 51.5 33 49.5 C27 47 18 40 16 26 Z"/></g></svg><span style="font:500 11px 'Hanken Grotesk';color:#A99F90;">Tinta sobre crema</span></div>
+    </div>
+
+    <div style="position:absolute;bottom:48px;left:64px;right:64px;display:flex;justify-content:space-between;font:500 11px 'Hanken Grotesk';letter-spacing:0.12em;text-transform:uppercase;color:#B7AE9F;"><span>Elephant · Manual de marca</span><span>05</span></div>
+  </div>
+
+  <!-- ============ 06 · LOGOTIPO MAL USO ============ -->
+  <div class="bb-page" data-screen-label="Logotipo · mal uso" style="position:relative;width:794px;height:1123px;flex:none;background:#F4EFE7;color:#221C16;box-shadow:0 24px 60px -28px rgba(20,16,40,0.35);padding:72px 64px 60px;">
+    <div style="font:500 12px 'Hanken Grotesk';letter-spacing:0.22em;text-transform:uppercase;color:#A99F90;">04 · Logotipo</div>
+    <h2 style="font:300 52px/1.04 'Newsreader',serif;letter-spacing:-0.02em;margin:14px 0 0;">Lo que <span style="font-style:italic;color:#B5524A;">nunca</span> hacemos</h2>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px;">
+      <div style="background:#fff;border:1px solid #E8E1D3;border-radius:16px;overflow:hidden;">
+        <div style="height:120px;background:#F4EFE7;display:flex;align-items:center;justify-content:center;"><svg width="46" height="46" viewBox="0 0 64 64" style="transform:scaleX(1.7);"><g fill="#221C16"><ellipse cx="12" cy="29" rx="8.5" ry="13"/><ellipse cx="52" cy="29" rx="8.5" ry="13"/><path d="M16 26 C16 15 25 11 32 11 C39 11 48 15 48 26 C48 35 44 41 40 44 C40.5 49 41 53 38 57.5 C36 60.5 32 60.5 31 57.5 C30.2 55 31.5 51.5 33 49.5 C27 47 18 40 16 26 Z"/></g></svg></div>
+        <div style="padding:16px 20px;display:flex;gap:9px;align-items:center;"><span style="color:#B5524A;font-size:16px;">✕</span><span style="font:400 16px 'Newsreader',serif;">No deformes ni estires las proporciones.</span></div>
+      </div>
+      <div style="background:#fff;border:1px solid #E8E1D3;border-radius:16px;overflow:hidden;">
+        <div style="height:120px;background:#5C7A61;display:flex;align-items:center;justify-content:center;"><svg width="46" height="46" viewBox="0 0 64 64"><g fill="#C94A3F"><ellipse cx="12" cy="29" rx="8.5" ry="13"/><ellipse cx="52" cy="29" rx="8.5" ry="13"/><path d="M16 26 C16 15 25 11 32 11 C39 11 48 15 48 26 C48 35 44 41 40 44 C40.5 49 41 53 38 57.5 C36 60.5 32 60.5 31 57.5 C30.2 55 31.5 51.5 33 49.5 C27 47 18 40 16 26 Z"/></g></svg></div>
+        <div style="padding:16px 20px;display:flex;gap:9px;align-items:center;"><span style="color:#B5524A;font-size:16px;">✕</span><span style="font:400 16px 'Newsreader',serif;">No uses colores fuera de la paleta.</span></div>
+      </div>
+      <div style="background:#fff;border:1px solid #E8E1D3;border-radius:16px;overflow:hidden;">
+        <div style="height:120px;background:#F4EFE7;display:flex;align-items:center;justify-content:center;"><svg width="46" height="46" viewBox="0 0 64 64" style="transform:rotate(24deg);"><g fill="#221C16"><ellipse cx="12" cy="29" rx="8.5" ry="13"/><ellipse cx="52" cy="29" rx="8.5" ry="13"/><path d="M16 26 C16 15 25 11 32 11 C39 11 48 15 48 26 C48 35 44 41 40 44 C40.5 49 41 53 38 57.5 C36 60.5 32 60.5 31 57.5 C30.2 55 31.5 51.5 33 49.5 C27 47 18 40 16 26 Z"/></g></svg></div>
+        <div style="padding:16px 20px;display:flex;gap:9px;align-items:center;"><span style="color:#B5524A;font-size:16px;">✕</span><span style="font:400 16px 'Newsreader',serif;">No lo rotes ni lo inclines.</span></div>
+      </div>
+      <div style="background:#fff;border:1px solid #E8E1D3;border-radius:16px;overflow:hidden;">
+        <div style="height:120px;background:#F4EFE7;display:flex;align-items:center;justify-content:center;gap:8px;"><svg width="40" height="40" viewBox="0 0 64 64"><g fill="#221C16"><ellipse cx="12" cy="29" rx="8.5" ry="13"/><ellipse cx="52" cy="29" rx="8.5" ry="13"/><path d="M16 26 C16 15 25 11 32 11 C39 11 48 15 48 26 C48 35 44 41 40 44 C40.5 49 41 53 38 57.5 C36 60.5 32 60.5 31 57.5 C30.2 55 31.5 51.5 33 49.5 C27 47 18 40 16 26 Z"/></g></svg><span style="font:700 22px 'Hanken Grotesk';">Elephant</span></div>
+        <div style="padding:16px 20px;display:flex;gap:9px;align-items:center;"><span style="color:#B5524A;font-size:16px;">✕</span><span style="font:400 16px 'Newsreader',serif;">No sustituyas la tipografía del nombre.</span></div>
+      </div>
+    </div>
+
+    <div style="margin-top:26px;background:#EFE8DB;border-radius:16px;padding:24px 28px;display:flex;gap:14px;align-items:flex-start;">
+      <span style="color:#5C7A61;font-size:18px;">✓</span>
+      <p style="font:400 18px/1.45 'Newsreader',serif;margin:0;color:#3E372E;">En caso de duda, usa el lockup oficial sin tocar nada: icono + «Elephant» en Newsreader 600, en uno de los tres pares de color aprobados.</p>
+    </div>
+
+    <div style="position:absolute;bottom:48px;left:64px;right:64px;display:flex;justify-content:space-between;font:500 11px 'Hanken Grotesk';letter-spacing:0.12em;text-transform:uppercase;color:#B7AE9F;"><span>Elephant · Manual de marca</span><span>06</span></div>
+  </div>
+
+  <!-- ============ 07 · COLOR ============ -->
+  <div class="bb-page" data-screen-label="Color" style="position:relative;width:794px;height:1123px;flex:none;background:#F4EFE7;color:#221C16;box-shadow:0 24px 60px -28px rgba(20,16,40,0.35);padding:72px 64px 60px;">
+    <div style="font:500 12px 'Hanken Grotesk';letter-spacing:0.22em;text-transform:uppercase;color:#A99F90;">05 · Color</div>
+    <h2 style="font:300 52px/1.04 'Newsreader',serif;letter-spacing:-0.02em;margin:14px 0 0;">Una paleta de<br>papel y tinta</h2>
+    <p style="font:400 18px/1.5 'Newsreader',serif;color:#4A4339;margin:18px 0 0;max-width:560px;">Cremas cálidas de fondo, índigo profundo para la voz de marca, un dorado único reservado al gancho fonético. Sin gradientes. El color hace el trabajo, no decora.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px;">
+      <div style="border-radius:16px;overflow:hidden;border:1px solid #E3DBCC;">
+        <div style="height:96px;background:#2B2752;"></div>
+        <div style="padding:14px 18px;background:#fff;"><div style="font:600 16px 'Hanken Grotesk';">Índigo</div><div style="font:500 13px 'Hanken Grotesk';color:#8B8174;margin-top:3px;">#2B2752 · acento primario, voz de marca</div></div>
+      </div>
+      <div style="border-radius:16px;overflow:hidden;border:1px solid #E3DBCC;">
+        <div style="height:96px;background:#241F40;"></div>
+        <div style="padding:14px 18px;background:#fff;"><div style="font:600 16px 'Hanken Grotesk';">Índigo profundo</div><div style="font:500 13px 'Hanken Grotesk';color:#8B8174;margin-top:3px;">#241F40 · fondo de la tarjeta de escena</div></div>
+      </div>
+      <div style="border-radius:16px;overflow:hidden;border:1px solid #E3DBCC;">
+        <div style="height:96px;background:#E8B881;"></div>
+        <div style="padding:14px 18px;background:#fff;"><div style="font:600 16px 'Hanken Grotesk';">Dorado</div><div style="font:500 13px 'Hanken Grotesk';color:#8B8174;margin-top:3px;">#E8B881 · gancho fonético · CTA de voz</div></div>
+      </div>
+      <div style="border-radius:16px;overflow:hidden;border:1px solid #E3DBCC;">
+        <div style="height:96px;background:#221C16;"></div>
+        <div style="padding:14px 18px;background:#fff;"><div style="font:600 16px 'Hanken Grotesk';">Tinta</div><div style="font:500 13px 'Hanken Grotesk';color:#8B8174;margin-top:3px;">#221C16 · texto principal</div></div>
+      </div>
+    </div>
+
+    <div style="margin-top:16px;display:flex;gap:12px;">
+      <div style="flex:1;border-radius:14px;overflow:hidden;border:1px solid #E3DBCC;"><div style="height:60px;background:#F4EFE7;border-bottom:1px solid #E3DBCC;"></div><div style="padding:11px 14px;background:#fff;"><div style="font:600 13px 'Hanken Grotesk';">Fondo</div><div style="font:500 11px 'Hanken Grotesk';color:#A99F90;">#F4EFE7</div></div></div>
+      <div style="flex:1;border-radius:14px;overflow:hidden;border:1px solid #E3DBCC;"><div style="height:60px;background:#EFE8DB;border-bottom:1px solid #E3DBCC;"></div><div style="padding:11px 14px;background:#fff;"><div style="font:600 13px 'Hanken Grotesk';">Fondo 2</div><div style="font:500 11px 'Hanken Grotesk';color:#A99F90;">#EFE8DB</div></div></div>
+      <div style="flex:1;border-radius:14px;overflow:hidden;border:1px solid #E3DBCC;"><div style="height:60px;background:#6E655A;"></div><div style="padding:11px 14px;background:#fff;"><div style="font:600 13px 'Hanken Grotesk';">Texto 2º</div><div style="font:500 11px 'Hanken Grotesk';color:#A99F90;">#6E655A</div></div></div>
+      <div style="flex:1;border-radius:14px;overflow:hidden;border:1px solid #E3DBCC;"><div style="height:60px;background:#A99F90;"></div><div style="padding:11px 14px;background:#fff;"><div style="font:600 13px 'Hanken Grotesk';">Apagado</div><div style="font:500 11px 'Hanken Grotesk';color:#A99F90;">#A99F90</div></div></div>
+    </div>
+
+    <div style="margin-top:26px;background:#fff;border:1px solid #E8E1D3;border-radius:16px;padding:22px 26px;">
+      <div style="font:600 12px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#A99F90;margin-bottom:12px;">Regla del dorado</div>
+      <p style="font:400 18px/1.45 'Newsreader',serif;margin:0;color:#3E372E;">El dorado <span style="color:#B0917E;font-style:italic;">#E8B881</span> es sagrado: solo aparece en el gancho fonético y en el botón «dilo en voz alta». Si todo es dorado, nada lo es.</p>
+    </div>
+
+    <div style="position:absolute;bottom:48px;left:64px;right:64px;display:flex;justify-content:space-between;font:500 11px 'Hanken Grotesk';letter-spacing:0.12em;text-transform:uppercase;color:#B7AE9F;"><span>Elephant · Manual de marca</span><span>07</span></div>
+  </div>
+
+  <!-- ============ 08 · TIPOGRAFÍA ============ -->
+  <div class="bb-page" data-screen-label="Tipografía" style="position:relative;width:794px;height:1123px;flex:none;background:#F4EFE7;color:#221C16;box-shadow:0 24px 60px -28px rgba(20,16,40,0.35);padding:72px 64px 60px;">
+    <div style="font:500 12px 'Hanken Grotesk';letter-spacing:0.22em;text-transform:uppercase;color:#A99F90;">06 · Tipografía</div>
+    <h2 style="font:300 52px/1.04 'Newsreader',serif;letter-spacing:-0.02em;margin:14px 0 0;">Dos voces</h2>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px;">
+      <div style="background:#fff;border:1px solid #E8E1D3;border-radius:18px;padding:26px;">
+        <div style="font:600 11px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#2B2752;">Display · cuerpo</div>
+        <div style="font:300 64px/1 'Newsreader',serif;margin:14px 0 4px;">Aa</div>
+        <div style="font:500 21px 'Newsreader',serif;">Newsreader</div>
+        <div style="font:400 14px/1.5 'Hanken Grotesk';color:#8B8174;margin-top:8px;">Serif editorial. Titulares, frases de escena y todo el texto largo. Pesos 300–600 + cursiva.</div>
+      </div>
+      <div style="background:#fff;border:1px solid #E8E1D3;border-radius:18px;padding:26px;">
+        <div style="font:600 11px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#2B2752;">Interfaz · etiquetas</div>
+        <div style="font:600 64px/1 'Hanken Grotesk';margin:14px 0 4px;">Aa</div>
+        <div style="font:600 21px 'Hanken Grotesk';">Hanken Grotesk</div>
+        <div style="font:400 14px/1.5 'Hanken Grotesk';color:#8B8174;margin-top:8px;">Grotesca neutra. Eyebrows, botones, datos y microcopy. Pesos 400–700, mayúsculas con tracking.</div>
+      </div>
+    </div>
+
+    <div style="margin-top:24px;background:#fff;border:1px solid #E8E1D3;border-radius:18px;padding:30px 32px;">
+      <div style="font:600 12px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#A99F90;margin-bottom:22px;">Escala tipográfica</div>
+      <div style="display:flex;flex-direction:column;gap:18px;">
+        <div style="display:flex;align-items:baseline;gap:18px;border-bottom:1px solid #EFE8DB;padding-bottom:18px;"><span style="font:300 46px 'Newsreader',serif;flex:1;">Recuérdalo</span><span style="font:500 12px 'Hanken Grotesk';color:#A99F90;white-space:nowrap;">Display · Newsreader 300 · 42–52px</span></div>
+        <div style="display:flex;align-items:baseline;gap:18px;border-bottom:1px solid #EFE8DB;padding-bottom:18px;"><span style="font:400 28px 'Newsreader',serif;flex:1;">Una escena inolvidable</span><span style="font:500 12px 'Hanken Grotesk';color:#A99F90;white-space:nowrap;">Título · Newsreader 400 · 28–32px</span></div>
+        <div style="display:flex;align-items:baseline;gap:18px;border-bottom:1px solid #EFE8DB;padding-bottom:18px;"><span style="font:400 19px 'Newsreader',serif;flex:1;">Cuerpo de texto editorial, cómodo de leer.</span><span style="font:500 12px 'Hanken Grotesk';color:#A99F90;white-space:nowrap;">Cuerpo · Newsreader 400 · 18–21px</span></div>
+        <div style="display:flex;align-items:baseline;gap:18px;border-bottom:1px solid #EFE8DB;padding-bottom:18px;"><span style="font:600 15px 'Hanken Grotesk';flex:1;">Continuar · Quédatela para siempre</span><span style="font:500 12px 'Hanken Grotesk';color:#A99F90;white-space:nowrap;">UI · Hanken 500–600 · 15–17px</span></div>
+        <div style="display:flex;align-items:baseline;gap:18px;"><span style="font:600 12px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#A99F90;flex:1;">El método Elephant</span><span style="font:500 12px 'Hanken Grotesk';color:#A99F90;white-space:nowrap;">Eyebrow · Hanken 600 · 12–13px · 0.16em</span></div>
+      </div>
+    </div>
+
+    <div style="position:absolute;bottom:48px;left:64px;right:64px;display:flex;justify-content:space-between;font:500 11px 'Hanken Grotesk';letter-spacing:0.12em;text-transform:uppercase;color:#B7AE9F;"><span>Elephant · Manual de marca</span><span>08</span></div>
+  </div>
+
+  <!-- ============ 09 · ILUSTRACIÓN ============ -->
+  <div class="bb-page" data-screen-label="Ilustración" style="position:relative;width:794px;height:1123px;flex:none;background:#F4EFE7;color:#221C16;box-shadow:0 24px 60px -28px rgba(20,16,40,0.35);padding:72px 64px 60px;">
+    <div style="font:500 12px 'Hanken Grotesk';letter-spacing:0.22em;text-transform:uppercase;color:#A99F90;">07 · Ilustración</div>
+    <h2 style="font:300 52px/1.04 'Newsreader',serif;letter-spacing:-0.02em;margin:14px 0 0;">Escenas de<br>una sola línea</h2>
+    <p style="font:400 18px/1.5 'Newsreader',serif;color:#4A4339;margin:18px 0 0;max-width:560px;">Cada palabra vive en una escena absurda dibujada con trazo continuo sobre el índigo profundo. La crema es la línea; el dorado señala el gancho. Nunca relleno plano, nunca realismo.</p>
+
+    <div style="margin-top:30px;background:#241F40;border-radius:20px;padding:34px;display:flex;align-items:center;justify-content:center;">
+      <svg viewBox="0 0 220 150" width="320" fill="none" stroke="#F4EFE7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="20" y="82" width="118" height="50" rx="7" stroke="rgba(244,239,231,0.34)"/>
+        <path d="M26 100 L132 100 L124 128 L34 128 Z" fill="rgba(244,239,231,0.06)" stroke="rgba(244,239,231,0.5)"/>
+        <circle cx="79" cy="114" r="3.6" fill="#F4EFE7" stroke="none"/>
+        <path d="M70 100 C68 80 74 64 92 58 C100 55 112 56 118 62" stroke="#F4EFE7" stroke-width="3.4"/>
+        <path d="M70 100 C74 86 80 78 90 74" stroke="rgba(244,239,231,0.5)" stroke-width="2.4"/>
+        <path d="M112 54 C126 50 142 54 146 64 C148 70 144 76 136 77 C130 78 120 76 116 70 C113 65 112 59 112 54 Z" fill="rgba(244,239,231,0.12)" stroke="#F4EFE7"/>
+        <path d="M58 92 q6 -16 16 -18" stroke="rgba(244,239,231,0.45)" stroke-width="2.4"/>
+        <path d="M108 52 l-3 -9 l8 4 z" fill="#F4EFE7" stroke="#F4EFE7"/>
+        <circle cx="120" cy="62" r="2.4" fill="#241F40" stroke="none"/>
+        <path d="M146 66 q14 0 22 -4" stroke="#E8B881" stroke-width="2.6"/>
+        <path d="M150 72 q16 2 26 -1" stroke="#E8B881" stroke-width="2.2"/>
+        <circle cx="178" cy="60" r="3.2" fill="#E8B881" stroke="none"/>
+        <circle cx="186" cy="68" r="2.4" fill="#E8B881" stroke="none"/>
+        <circle cx="180" cy="75" r="1.8" fill="#E8B881" stroke="none"/>
+      </svg>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:18px;">
+      <div style="background:#fff;border:1px solid #E8E1D3;border-radius:14px;padding:18px 20px;"><div style="font:600 11px 'Hanken Grotesk';letter-spacing:0.12em;text-transform:uppercase;color:#5C7A61;margin-bottom:8px;">Trazo</div><div style="font:400 16px/1.35 'Newsreader',serif;">Línea continua de 3 px, extremos redondeados. Sin sombras.</div></div>
+      <div style="background:#fff;border:1px solid #E8E1D3;border-radius:14px;padding:18px 20px;"><div style="font:600 11px 'Hanken Grotesk';letter-spacing:0.12em;text-transform:uppercase;color:#5C7A61;margin-bottom:8px;">Color</div><div style="font:400 16px/1.35 'Newsreader',serif;">Crema sobre índigo. El dorado solo en el elemento del gancho.</div></div>
+      <div style="background:#fff;border:1px solid #E8E1D3;border-radius:14px;padding:18px 20px;"><div style="font:600 11px 'Hanken Grotesk';letter-spacing:0.12em;text-transform:uppercase;color:#5C7A61;margin-bottom:8px;">Tono</div><div style="font:400 16px/1.35 'Newsreader',serif;">Absurdo y vívido. Cuanto más raro, mejor se recuerda.</div></div>
+    </div>
+
+    <div style="margin-top:18px;background:#EFE8DB;border-radius:14px;padding:20px 24px;font:400 16px/1.45 'Newsreader',serif;color:#3E372E;"><span style="font-style:italic;color:#2B2752;">Ejemplo:</span> «Abres el <span style="text-decoration:underline;text-decoration-color:#E8B881;text-underline-offset:3px;">cajón</span> y un <span style="color:#B0917E;font-weight:600;">DRO</span>medario asoma entre los calcetines» → <strong style="font-weight:600;">drawer</strong>.</div>
+
+    <div style="position:absolute;bottom:48px;left:64px;right:64px;display:flex;justify-content:space-between;font:500 11px 'Hanken Grotesk';letter-spacing:0.12em;text-transform:uppercase;color:#B7AE9F;"><span>Elephant · Manual de marca</span><span>09</span></div>
+  </div>
+
+  <!-- ============ 10 · TARJETA DE ESCENA ============ -->
+  <div class="bb-page" data-screen-label="Tarjeta de escena" style="position:relative;width:794px;height:1123px;flex:none;background:#F4EFE7;color:#221C16;box-shadow:0 24px 60px -28px rgba(20,16,40,0.35);padding:72px 64px 60px;">
+    <div style="font:500 12px 'Hanken Grotesk';letter-spacing:0.22em;text-transform:uppercase;color:#A99F90;">08 · Componente héroe</div>
+    <h2 style="font:300 52px/1.04 'Newsreader',serif;letter-spacing:-0.02em;margin:14px 0 0;">La tarjeta de escena</h2>
+    <p style="font:400 17px/1.5 'Newsreader',serif;color:#4A4339;margin:16px 0 0;max-width:540px;">El corazón del producto. Tres pasos apilados: el sonido, la historia, la voz. Fondo <span style="font-style:italic;">#241F40</span>, esquinas de 22px.</p>
+
+    <div style="display:flex;gap:26px;margin-top:26px;align-items:flex-start;">
+      <div style="flex:none;width:320px;background:#241F40;border-radius:22px;padding:24px;">
+        <div style="text-align:center;font:600 11px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:rgba(244,239,231,0.42);">Cajón en inglés</div>
+        <div style="display:flex;align-items:baseline;justify-content:center;gap:10px;margin-top:8px;"><div style="font:500 50px/1 'Newsreader',serif;color:#F7F3EA;">drawer</div><div style="font:400 16px italic 'Newsreader',serif;color:rgba(244,239,231,0.55);">/ˈdrɔː.ər/</div></div>
+        <div style="margin-top:18px;border:1px solid rgba(232,184,129,0.4);background:rgba(232,184,129,0.08);border-radius:14px;padding:14px;">
+          <div style="display:inline-flex;align-items:center;gap:7px;background:rgba(232,184,129,0.18);border-radius:999px;padding:4px 11px;margin-bottom:10px;"><span style="font:700 10px 'Hanken Grotesk';letter-spacing:0.08em;color:#E8B881;">PASO 1</span><span style="font:500 11px 'Hanken Grotesk';color:rgba(244,239,231,0.7);">el sonido</span></div>
+          <div style="text-align:center;font:500 22px 'Newsreader',serif;color:#F7F3EA;"><span style="color:#E8B881;font-weight:600;">DRO</span>medario</div>
+        </div>
+        <div style="margin-top:12px;border:1px solid rgba(244,239,231,0.12);background:rgba(244,239,231,0.04);border-radius:14px;padding:14px;">
+          <div style="display:inline-flex;align-items:center;gap:7px;background:rgba(244,239,231,0.1);border-radius:999px;padding:4px 11px;margin-bottom:10px;"><span style="font:700 10px 'Hanken Grotesk';letter-spacing:0.08em;color:#F4EFE7;">PASO 2</span><span style="font:500 11px 'Hanken Grotesk';color:rgba(244,239,231,0.7);">la historia</span></div>
+          <div style="font:400 16px/1.4 'Newsreader',serif;color:#F7F3EA;">Abres el <span style="text-decoration:underline;text-decoration-color:rgba(232,184,129,0.85);text-underline-offset:4px;">cajón</span> y un <span style="color:#E8B881;font-weight:600;">DRO</span>medario asoma entre tus calcetines.</div>
+        </div>
+        <div style="margin-top:12px;background:#E8B881;color:#241F40;border-radius:12px;padding:13px;text-align:center;font:600 15px 'Hanken Grotesk';">🔊 Dilo en voz alta</div>
+      </div>
+
+      <div style="flex:1;display:flex;flex-direction:column;gap:14px;">
+        <div style="background:#fff;border:1px solid #E8E1D3;border-radius:14px;padding:18px 20px;"><div style="font:600 11px 'Hanken Grotesk';letter-spacing:0.14em;text-transform:uppercase;color:#E8B881;margin-bottom:7px;">Paso 1 · el sonido</div><div style="font:400 16px/1.4 'Newsreader',serif;color:#3E372E;">Píldora con borde dorado. La palabra-gancho en español con las sílabas clave en <strong style="font-weight:600;">mayúscula dorada</strong>.</div></div>
+        <div style="background:#fff;border:1px solid #E8E1D3;border-radius:14px;padding:18px 20px;"><div style="font:600 11px 'Hanken Grotesk';letter-spacing:0.14em;text-transform:uppercase;color:#6E655A;margin-bottom:7px;">Paso 2 · la historia</div><div style="font:400 16px/1.4 'Newsreader',serif;color:#3E372E;">Ilustración de línea + frase de escena en Newsreader. Palabra española subrayada en oro, gancho en negrita dorada.</div></div>
+        <div style="background:#fff;border:1px solid #E8E1D3;border-radius:14px;padding:18px 20px;"><div style="font:600 11px 'Hanken Grotesk';letter-spacing:0.14em;text-transform:uppercase;color:#B0917E;margin-bottom:7px;">Paso 3 · la voz</div><div style="font:400 16px/1.4 'Newsreader',serif;color:#3E372E;">CTA dorado de bloque completo. Pronuncia la palabra en inglés con <span style="font-style:italic;">speechSynthesis</span>.</div></div>
+        <div style="background:#2B2752;border-radius:14px;padding:18px 20px;color:#F4EFE7;"><div style="font:600 11px 'Hanken Grotesk';letter-spacing:0.14em;text-transform:uppercase;color:rgba(232,184,129,0.9);margin-bottom:7px;">Anatomía fija</div><div style="font:400 16px/1.4 'Newsreader',serif;">Palabra inglesa pequeña arriba, escena grande debajo. <span style="font-style:italic;color:#E8B881;">La historia manda.</span></div></div>
+      </div>
+    </div>
+
+    <div style="position:absolute;bottom:48px;left:64px;right:64px;display:flex;justify-content:space-between;font:500 11px 'Hanken Grotesk';letter-spacing:0.12em;text-transform:uppercase;color:#B7AE9F;"><span>Elephant · Manual de marca</span><span>10</span></div>
+  </div>
+
+  <!-- ============ 11 · COMPONENTES UI ============ -->
+  <div class="bb-page" data-screen-label="Componentes UI" style="position:relative;width:794px;height:1123px;flex:none;background:#F4EFE7;color:#221C16;box-shadow:0 24px 60px -28px rgba(20,16,40,0.35);padding:72px 64px 60px;">
+    <div style="font:500 12px 'Hanken Grotesk';letter-spacing:0.22em;text-transform:uppercase;color:#A99F90;">09 · Interfaz</div>
+    <h2 style="font:300 52px/1.04 'Newsreader',serif;letter-spacing:-0.02em;margin:14px 0 0;">Componentes</h2>
+
+    <div style="margin-top:30px;background:#fff;border:1px solid #E8E1D3;border-radius:18px;padding:26px;">
+      <div style="font:600 12px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#A99F90;margin-bottom:18px;">Botones</div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+        <button style="background:#2B2752;color:#F4EFE7;border:none;border-radius:16px;padding:16px 34px;font:500 18px 'Newsreader',serif;cursor:default;">Continuar</button>
+        <button style="background:#E8B881;color:#241F40;border:none;border-radius:14px;padding:15px 28px;font:600 16px 'Hanken Grotesk';cursor:default;">🔊 Dilo en voz alta</button>
+        <button style="background:#F4EFE7;color:#6E655A;border:1.5px solid #DDD0BC;border-radius:14px;padding:14px 26px;font:500 16px 'Hanken Grotesk';cursor:default;">No la sé</button>
+      </div>
+      <div style="font:400 14px/1.5 'Hanken Grotesk';color:#8B8174;margin-top:16px;">Primario índigo en Newsreader (radio 16). CTA de voz dorado en Hanken (radio 14). Secundario fantasma con borde arena.</div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px;">
+      <div style="background:#fff;border:1px solid #E8E1D3;border-radius:18px;padding:26px;">
+        <div style="font:600 12px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#A99F90;margin-bottom:18px;">Campo de texto</div>
+        <input placeholder="Escríbela en inglés…" readonly style="width:100%;background:#fff;border:1.5px solid #DDD0BC;color:#221C16;border-radius:13px;padding:15px 16px;font:500 16px 'Hanken Grotesk';">
+        <div style="font:400 13px/1.5 'Hanken Grotesk';color:#8B8174;margin-top:12px;">Fondo blanco, borde arena 1.5px, radio 13. Placeholder en gris cálido.</div>
+      </div>
+      <div style="background:#fff;border:1px solid #E8E1D3;border-radius:18px;padding:26px;">
+        <div style="font:600 12px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#A99F90;margin-bottom:18px;">Píldoras y etiquetas</div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+          <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(232,184,129,0.18);border:1px solid rgba(232,184,129,0.5);border-radius:999px;padding:6px 13px;font:700 11px 'Hanken Grotesk';letter-spacing:0.08em;color:#B0843E;">PASO 1</span>
+          <span style="background:#EFE8DB;border-radius:999px;padding:7px 15px;font:500 13px 'Hanken Grotesk';color:#2B2752;">armario</span>
+          <span style="font:600 11px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#A99F90;">En español</span>
+        </div>
+        <div style="font:400 13px/1.5 'Hanken Grotesk';color:#8B8174;margin-top:14px;">Eyebrows en mayúscula con tracking. Píldoras de selección en arena.</div>
+      </div>
+    </div>
+
+    <div style="margin-top:18px;background:#fff;border:1px solid #E8E1D3;border-radius:18px;padding:26px;">
+      <div style="font:600 12px 'Hanken Grotesk';letter-spacing:0.16em;text-transform:uppercase;color:#A99F90;margin-bottom:18px;">Tarjetas y superficies</div>
+      <div style="display:flex;gap:14px;">
+        <div style="flex:1;background:#FBF7F0;border:1px solid #E8E1D3;border-radius:18px;padding:20px;font:400 15px/1.4 'Newsreader',serif;color:#6E655A;">Tarjeta clara<br><span style="font:500 12px 'Hanken Grotesk';color:#A99F90;">#FBF7F0 · radio 18–26 · borde #E8E1D3</span></div>
+        <div style="flex:1;background:#EFE8DB;border-radius:18px;padding:20px;font:400 15px/1.4 'Newsreader',serif;color:#6E655A;">Superficie arena<br><span style="font:500 12px 'Hanken Grotesk';color:#A99F90;">#EFE8DB · sin borde</span></div>
+        <div style="flex:1;background:#241F40;border-radius:18px;padding:20px;font:400 15px/1.4 'Newsreader',serif;color:rgba(244,239,231,0.7);">Tarjeta oscura<br><span style="font:500 12px 'Hanken Grotesk';color:rgba(244,239,231,0.45);">#241F40 · escena</span></div>
+      </div>
+    </div>
+
+    <div style="position:absolute;bottom:48px;left:64px;right:64px;display:flex;justify-content:space-between;font:500 11px 'Hanken Grotesk';letter-spacing:0.12em;text-transform:uppercase;color:#B7AE9F;"><span>Elephant · Manual de marca</span><span>11</span></div>
+  </div>
+
+  <!-- ============ 12 · MOTION + TOKENS ============ -->
+  <div class="bb-page" data-screen-label="Motion y tokens" style="position:relative;width:794px;height:1123px;flex:none;background:#241F40;color:#F4EFE7;box-shadow:0 24px 60px -28px rgba(20,16,40,0.5);padding:72px 64px 60px;">
+    <div style="font:500 12px 'Hanken Grotesk';letter-spacing:0.22em;text-transform:uppercase;color:rgba(232,184,129,0.9);">10 · Movimiento y tokens</div>
+    <h2 style="font:300 52px/1.04 'Newsreader',serif;letter-spacing:-0.02em;margin:14px 0 0;color:#F7F3EA;">Para quien<br>lo codifica</h2>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px;">
+      <div style="background:rgba(244,239,231,0.05);border:1px solid rgba(244,239,231,0.12);border-radius:16px;padding:22px;">
+        <div style="font:600 11px 'Hanken Grotesk';letter-spacing:0.14em;text-transform:uppercase;color:rgba(232,184,129,0.9);margin-bottom:12px;">Movimiento</div>
+        <div style="display:flex;flex-direction:column;gap:9px;font:400 15px/1.4 'Newsreader',serif;color:rgba(244,239,231,0.85);">
+          <div><span style="color:#E8B881;">reveal</span> — 420ms · cubic-bezier(.16,1,.3,1)</div>
+          <div><span style="color:#E8B881;">fadeUp</span> — 350ms · ease</div>
+          <div><span style="color:#E8B881;">beat de silencio</span> — 2100ms antes de revelar</div>
+          <div style="color:rgba(244,239,231,0.6);font-size:13px;font-family:'Hanken Grotesk';">prefers-reduced-motion → 0.001ms</div>
+        </div>
+      </div>
+      <div style="background:rgba(244,239,231,0.05);border:1px solid rgba(244,239,231,0.12);border-radius:16px;padding:22px;">
+        <div style="font:600 11px 'Hanken Grotesk';letter-spacing:0.14em;text-transform:uppercase;color:rgba(232,184,129,0.9);margin-bottom:12px;">Tipografía</div>
+        <div style="display:flex;flex-direction:column;gap:9px;font:400 15px/1.4 'Hanken Grotesk';color:rgba(244,239,231,0.85);">
+          <div><span style="color:#E8B881;">--font-display</span> · 'Newsreader', serif</div>
+          <div><span style="color:#E8B881;">--font-ui</span> · 'Hanken Grotesk', sans</div>
+          <div style="color:rgba(244,239,231,0.6);font-size:13px;">clamp() acotado para 430px de ancho</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:16px;background:rgba(244,239,231,0.05);border:1px solid rgba(244,239,231,0.12);border-radius:16px;padding:24px;">
+      <div style="font:600 11px 'Hanken Grotesk';letter-spacing:0.14em;text-transform:uppercase;color:rgba(232,184,129,0.9);margin-bottom:16px;">Tokens de color</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:11px 28px;font:400 14px 'Hanken Grotesk';">
+        <div style="display:flex;align-items:center;gap:11px;"><span style="width:18px;height:18px;border-radius:5px;background:#F4EFE7;flex:none;"></span><span style="color:#E8B881;">--bg</span><span style="color:rgba(244,239,231,0.7);margin-left:auto;">#F4EFE7</span></div>
+        <div style="display:flex;align-items:center;gap:11px;"><span style="width:18px;height:18px;border-radius:5px;background:#EFE8DB;flex:none;"></span><span style="color:#E8B881;">--bg-2</span><span style="color:rgba(244,239,231,0.7);margin-left:auto;">#EFE8DB</span></div>
+        <div style="display:flex;align-items:center;gap:11px;"><span style="width:18px;height:18px;border-radius:5px;background:#2B2752;border:1px solid rgba(244,239,231,0.2);flex:none;"></span><span style="color:#E8B881;">--indigo</span><span style="color:rgba(244,239,231,0.7);margin-left:auto;">#2B2752</span></div>
+        <div style="display:flex;align-items:center;gap:11px;"><span style="width:18px;height:18px;border-radius:5px;background:#241F40;border:1px solid rgba(244,239,231,0.2);flex:none;"></span><span style="color:#E8B881;">--indigo-deep</span><span style="color:rgba(244,239,231,0.7);margin-left:auto;">#241F40</span></div>
+        <div style="display:flex;align-items:center;gap:11px;"><span style="width:18px;height:18px;border-radius:5px;background:#E8B881;flex:none;"></span><span style="color:#E8B881;">--gold</span><span style="color:rgba(244,239,231,0.7);margin-left:auto;">#E8B881</span></div>
+        <div style="display:flex;align-items:center;gap:11px;"><span style="width:18px;height:18px;border-radius:5px;background:#221C16;border:1px solid rgba(244,239,231,0.2);flex:none;"></span><span style="color:#E8B881;">--ink</span><span style="color:rgba(244,239,231,0.7);margin-left:auto;">#221C16</span></div>
+        <div style="display:flex;align-items:center;gap:11px;"><span style="width:18px;height:18px;border-radius:5px;background:#6E655A;flex:none;"></span><span style="color:#E8B881;">--text-2</span><span style="color:rgba(244,239,231,0.7);margin-left:auto;">#6E655A</span></div>
+        <div style="display:flex;align-items:center;gap:11px;"><span style="width:18px;height:18px;border-radius:5px;background:#A99F90;flex:none;"></span><span style="color:#E8B881;">--text-muted</span><span style="color:rgba(244,239,231,0.7);margin-left:auto;">#A99F90</span></div>
+      </div>
+    </div>
+
+    <div style="margin-top:16px;background:rgba(197,77,63,0.12);border:1px solid rgba(232,184,129,0.3);border-radius:16px;padding:22px 26px;">
+      <div style="font:600 11px 'Hanken Grotesk';letter-spacing:0.14em;text-transform:uppercase;color:#E8B881;margin-bottom:12px;">Prohibido</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;font:500 14px 'Hanken Grotesk';color:rgba(244,239,231,0.85);">
+        <span style="background:rgba(244,239,231,0.08);border-radius:8px;padding:7px 13px;">✕ gradientes de fondo</span>
+        <span style="background:rgba(244,239,231,0.08);border-radius:8px;padding:7px 13px;">✕ emojis (salvo 🔊 del CTA)</span>
+        <span style="background:rgba(244,239,231,0.08);border-radius:8px;padding:7px 13px;">✕ rachas / leaderboards</span>
+        <span style="background:rgba(244,239,231,0.08);border-radius:8px;padding:7px 13px;">✕ Inter / Roboto</span>
+        <span style="background:rgba(244,239,231,0.08);border-radius:8px;padding:7px 13px;">✕ overflow:hidden en el contenedor</span>
+      </div>
+    </div>
+
+    <div style="position:absolute;bottom:48px;left:64px;right:64px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(244,239,231,0.15);padding-top:18px;">
+      <div style="display:flex;align-items:center;gap:9px;"><svg width="20" height="20" viewBox="0 0 64 64"><g fill="#E8B881"><ellipse cx="12" cy="29" rx="8.5" ry="13"/><ellipse cx="52" cy="29" rx="8.5" ry="13"/><path d="M16 26 C16 15 25 11 32 11 C39 11 48 15 48 26 C48 35 44 41 40 44 C40.5 49 41 53 38 57.5 C36 60.5 32 60.5 31 57.5 C30.2 55 31.5 51.5 33 49.5 C27 47 18 40 16 26 Z"/></g></svg><span style="font:500 13px 'Newsreader',serif;color:rgba(244,239,231,0.7);">Un elefante nunca olvida.</span></div>
+      <span style="font:500 11px 'Hanken Grotesk';letter-spacing:0.12em;text-transform:uppercase;color:rgba(244,239,231,0.4);">12</span>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,116 @@
+# Elephant — Traspaso de diseño
+
+## Qué es el producto
+App móvil (PWA) de vocabulario. **No enseña inglés: hace que recuerdes una palabra durante años.**  
+Mecanismo: mnemotecnia (escena absurda + gancho fonético) + repetición espaciada.  
+Nombre: "un elefante nunca olvida".
+
+---
+
+## Archivo principal activo
+**`Elephant Landing v2.dc.html`** — la landing page completa.  
+(Existe también `Elephant Landing.dc.html` — versión anterior, no tocar.)
+
+El bundle para móvil se genera con `super_inline_html` → `Elephant Landing movil.html`.
+
+---
+
+## Sistema visual (no cambiar sin razón)
+
+| Token | Valor |
+|---|---|
+| Fondo principal | `#F4EFE7` |
+| Fondo secundario | `#EFE8DB` / `#EFE8D3` |
+| Índigo (acento primario) | `#2B2752` |
+| Oscuro profundo (tarjeta escena) | `#241F40` |
+| Dorado (gancho fonético / CTA voz) | `#E8B881` |
+| Texto principal | `#221C16` |
+| Texto secundario | `#6E655A` / `#A99F90` |
+| Tipografía display/body | **Newsreader** (Google Fonts) |
+| Tipografía UI/labels | **Hanken Grotesk** (Google Fonts) |
+
+**Prohibido:** gradientes de fondo, emojis, rachas, leaderboards, Inter/Roboto.
+
+---
+
+## Estructura de pantallas (flujo de scroll)
+
+1. **S1 · La promesa** — *"Aprende una palabra hoy. Recuérdala dentro de diez años."* Hero vacío, un CTA.
+2. **S2 · El dolor + Demo** — corazón del producto:
+   - Paso A (curado): muestra **"cajón"** → input *"¿Cómo se dice en inglés?"* → botón → revela tarjeta **drawer**.
+   - Tarjeta revelación: `drawer` grande, ilustración SVG dromedario, puente **DROmedario → DRO → draw**, frase de escena, CTA dorado "Dilo en voz alta" (speechSynthesis), botón Continuar.
+   - Paso B (live): selector de 5 palabras (armario, grifo, bañera, cojín, colchón) → elige una → *"¿Cómo se dice en inglés?"* → genera escena con IA (`window.claude.complete`) → muestra tarjeta igual que la curada + botón "Quédatela para siempre".
+3. **S3 · La cuenta** — *5 palabras/día → 1.825/año → con 1.500 ya hablas un idioma* (fondo #241F40).
+4. **S4 · Por qué funciona** — *"Tu cerebro no olvida idiomas. Olvida lo aburrido."* + 2 tarjetas (escena absurda / repaso espaciado con gráfica) + curva del olvido.
+5. **S5 · Credibilidad** — un solo testimonio.
+6. **S6 · Oferta** — un solo plan (59 €/año), CTA *"Sigue con tu palabra y 5 más"*, palabra del usuario viaja al checkout.
+7. **Checkout overlay** — formulario mínimo (email + tarjeta + nombre).
+8. **Success overlay** — confirmación con la palabra del usuario.
+
+---
+
+## Componentes clave
+
+### Tarjeta de escena (el héroe del producto)
+Fondo `#241F40`, dentro:
+- Etiqueta pequeña "X en inglés" + palabra inglesa grande (Newsreader 50–60px) + pronunciación italic
+- Ilustración SVG de la escena (dromedario en cajón)
+- Píldora dorada: **GANCHO FONÉTICO** → gloss (p.ej. "DROmedario · suena como drawer")
+- Frase de escena en Newsreader 24–30px, palabras clave subrayadas en oro
+- CTA dorado: "Dilo en voz alta" → `speechSynthesis` en inglés
+
+### Generación en vivo
+```js
+window.claude.complete(prompt) // disponible en el entorno DC
+```
+El prompt pide JSON: `{ eng, hook, gloss, pron, scene }`.  
+Fallback de plantilla si falla o hay timeout (13s).
+
+---
+
+## Lógica de estado (renderVals)
+```
+view: 'landing' | 'checkout' | 'success'
+live: 'pick' | 'assoc' | 'loading' | 'done'
+curatedRevealed: boolean
+beatDone: boolean (beat de 2.1s)
+userWord: string (palabra española elegida)
+userAssoc: string (intento en inglés del usuario)
+scene: { eng, hook, gloss, pron, scene } | null
+```
+
+---
+
+## Animaciones / motion
+- Revelación: `reveal` keyframe, 420ms cubic-bezier(.16,1,.3,1)
+- fadeUp: 350ms ease
+- Beat de silencio: 2100ms antes de que aparezca el botón de revelar
+- `prefers-reduced-motion` respetado (durations .001ms)
+
+---
+
+## Decisiones de diseño importantes
+- **Una idea por pantalla** (scroll-snap)
+- **La historia es el protagonista**, no la palabra inglesa — palabra pequeña arriba, escena grande
+- **El + entre tarjetas** fue eliminado — las tarjetas van apiladas en móvil
+- **Sin overflow:hidden en el contenedor** (rompe el sticky nav) — usar overflow-x:clip si se necesita
+- **Tamaños de fuente con clamp()** acotados para 430px: hero ~42px max, cajón ~54px max
+- Contenedor a **max-width:430px** centrado con fondo gris (#E5E0D7) a los lados para simular móvil
+- **Bezel de teléfono** como overlay fixed pointer-events:none (solo visual, no interfiere)
+
+---
+
+## Pendientes / próximos pasos sugeridos
+- [ ] Afinar ilustración del dromedario (ahora en SVG de línea, podría ser más expresiva)
+- [ ] Añadir la pantalla de **Repaso** (la app real: muestra palabra española → usuario recuerda → revela → "la recordé / no la recordé")
+- [ ] Conectar con pasarela de pago real (Stripe Checkout)
+- [ ] Versión desktop de la landing (2 columnas en la demo)
+- [ ] Generar escenas para las 5 palabras del selector con pre-cocinado (calidad garantizada)
+- [ ] Añadir `manifest.json` + service worker para que sea instalable como PWA
+
+---
+
+## Cómo generar el enlace móvil
+1. Editar `Elephant Landing v2.dc.html`
+2. Llamar `super_inline_html({ input: 'Elephant Landing v2.dc.html', output: 'Elephant Landing movil.html' })`
+3. Llamar `get_public_file_url({ path: 'Elephant Landing movil.html' })` → enlace caduca en ~1h
